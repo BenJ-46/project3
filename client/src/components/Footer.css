@@ -1,0 +1,17 @@
+.main-footer {
+  color: white;
+  background-color:#7A9E;
+  padding-top: 1em;
+  position: relative;
+  bottom:0;
+  width:100%;
+}
+
+.center{
+  text-align: center;
+}
+
+.bcolor {
+  background-color:#7A9E !important;
+}
+
