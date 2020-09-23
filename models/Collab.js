@@ -29,7 +29,7 @@ const Collab = new Schema({
     devHist: {
         type: String,
         required: true
-    },
+    }},
     { timestamps: true })
 
 
