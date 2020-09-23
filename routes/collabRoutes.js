@@ -22,11 +22,4 @@ router.post('/collabs', (req, res) => {
     .catch(err => console.error(err))
 })
 
-// we may not need => *{ $push : { items: req.body }}
-router.put('/collabs/:id', (req, res) => {
-  Collab.findByIdAndUpdate(req.params.id, { $push : { items: req.body } })
-    .then(() => res.sendStatus(200))
-    .catch(err => console.error(err))
-})
-
 module.exports = router

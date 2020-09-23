@@ -19,14 +19,15 @@ router.post('/users', (req, res) => {
     .catch(err => console.error(err))
 })
 
-// we may not need => *{ $push : { items: req.body }} *Need to delete (TBD)
-router.put('/users/:id', (req, res) => {
-  User.findByIdAndUpdate(req.params.id, { $push : { items: req.body } })
-    .then(() => res.sendStatus(200))
-    .catch(err => console.error(err))
-})
 
 module.exports = router
+
+// Update One
+// router.put('/users/:id', (req, res) => {
+//   User.findByIdAndUpdate(req.params.id, req.body)
+//     .then(() => res.sendStatus(200))
+//     .catch(err => console.error(err))
+// })
 
 // SHOULD WE USE THESE ROUTES INSTEAD ///
 // const router = require('express').Router()
