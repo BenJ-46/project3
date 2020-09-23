@@ -13,5 +13,10 @@
 
 .bcolor {
   background-color:#7A9E !important;
+  outline: none !important;
 }
 
+.btn:focus {
+    outline: none !important;
+    outline-offset: none !important;
+}
