@@ -1,55 +1,60 @@
-// const router = require('express').Router()
-// const { User } = require('../models')
-// const passport = require('passport')
-// const jwt = require('jsonwebtoken')
+const router = require('express').Router()
+const { User } = require('../models')
 
-// router.post('/users/register', (req, res) => {
-//     const { name, email, username, password } = req.body
-//     User.register(new User({ name, email, username }), password, err => {
-//         if (err) { console.log(err) }
-//         res.sendStatus(200)
-//     })
-// })
+router.get('/users/:id', (req, res) => {
+  User.findById(req.params.id)
+    .then(user => res.json(user))
+    .catch(err => console.error(err))
+})
 
-// router.post('/users/login', (req, res) => {
-//     const { username, password } = req.body
-//     User.authenticate()(username, password, (err, user) => {
-//         if (err) { console.log(err) }
-//         res.json(user ? jwt.sign({ id: user._id }, process.env.SECRET) : null)
-//     })
-// })
+router.get('/users/un/:username', (req, res) => {
+  User.find({ username: req.params.username })
+    .then(users => res.json(users[0]))
+    .catch(err => console.error(err))
+})
 
-// router.get('/users/items', passport.authenticate('jwt'), (req, res) => {
-//     res.json(req.user)
-// })
+router.post('/users', (req, res) => {
+  User.create(req.body)
+    .then(user => res.json(user))
+    .catch(err => console.error(err))
+})
 
-// GET all users
-// router.get('/users', (req, res) => {
-//   User.find()
-//     .populate('items')
-//     .then(users => res.json(users))
-//     .catch(err => console.log(err))
-// })
 
-// POST one user
-// router.post('/users', (req, res) => {
-//   User.create(req.body)
-//     .then(user => res.json(user))
-//     .catch(err => console.log(err))
-// })
+module.exports = router
 
-// PUT one user
+// Update One
 // router.put('/users/:id', (req, res) => {
 //   User.findByIdAndUpdate(req.params.id, req.body)
 //     .then(() => res.sendStatus(200))
-//     .catch(err => console.log(err))
+//     .catch(err => console.error(err))
 // })
 
-// DELETE one user
-// router.delete('/users/:id', (req, res) => {
-//   User.findByIdAndDelete(req.params.id)
+// SHOULD WE USE THESE ROUTES INSTEAD ///
+// const router = require('express').Router()
+// const { Item } = require('../models')
+
+// router.get('/items', (req, res) => {
+//   Item.find()
+//     .then(items => res.json(items))
+//     .catch(err => console.error(err))
+// })
+
+// router.post('/items', (req, res) => {
+//   Item.create(req.body)
+//     .then(item => res.json(item))
+//     .catch(err => console.error(err))
+// })
+
+// router.put('/items/:id', (req, res) => {
+//   Item.findByIdAndUpdate(req.params.id, req.body)
 //     .then(() => res.sendStatus(200))
-//     .catch(err => console.log(err))
+//     .catch(err => console.error(err))
+// })
+
+// router.delete('/items/:id', (req, res) => {
+//   Item.findByIdAndDelete(req.params.id)
+//     .then(() => res.sendStatus(200))
+//     .catch(err => console.error(err))
 // })
 
 // module.exports = router

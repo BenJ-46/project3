@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Container, Row, Col, Card } from 'reactstrap';
 
+const Login = (props) => {
 
-const Example = (props) => {
+  
+
   return (
 
     <>
-     <Row>
+      <Row>
         <Col xs="6">
-        
-        <Card>
+
+          <Card>
             <Form>
               <FormGroup>
                 <Label for="exampleName">Name</Label>
@@ -24,7 +26,6 @@ const Example = (props) => {
                 <Label for="examplePassword">Password</Label>
                 <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
               </FormGroup>
-             
               <FormGroup>
                 <Label for="exampleSelectMulti">Bio</Label>
                 <Input type="textarea" name="text" id="exampleText">
@@ -39,14 +40,14 @@ const Example = (props) => {
                 <Input type="textarea" name="text" id="exampleText" />
                 <FormText color="muted">
                   Enter your developmental history within the last 3 years.
-        </FormText>
+              </FormText>
               </FormGroup>
 
               <Button>Sign up Now!</Button>
             </Form>
-        </Card>
-        
-        
+          </Card>
+
+
         </Col>
         <Col xs="6">
           <Card>
@@ -63,13 +64,31 @@ const Example = (props) => {
               <Button>Sign in Now!</Button>
             </Form>
           </Card>
-          
+
 
         </Col>
-      
+
       </Row>
     </>
   );
 }
 
-export default Example;
+// export default Login
+
+// const [userState, setUserState] = userState({
+//   name: '',
+//   email: '',
+//   password: '',
+//   bio: '',
+//   Language: '',
+//   History: '',
+//   user: []
+// })
+
+// userState.handleRegisterChange = event => {
+  
+// }
+
+// userState.handleInputChange = event => {
+//   setUserState({ ...userState, [event.target.name]: event.target.value })
+// }
