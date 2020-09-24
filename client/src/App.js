@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Login from './Pages/Login'
+import Signup from './Pages/Signup'
 import Home from './Pages/Home'
 import Collab from './Pages/Collab'
 import Team from './Pages/Team'
@@ -30,6 +31,9 @@ const App = () => {
                       <NavLink href="/">Login</NavLink>
                     </NavItem>
                     <NavItem>
+                      <NavLink href="/Signup">Signup</NavLink>
+                    </NavItem>
+                    <NavItem>
                       <NavLink href="/Home">Home</NavLink>
                     </NavItem>
                   <NavItem>
@@ -47,6 +51,7 @@ const App = () => {
               <Route path="/Home" component={Home} />
             <Route path="/Collab" component={Collab} />
             <Route path="/Team" component={Team} />
+              <Route path="/Signup" component={Signup} />
           </Switch>
           </Router>
 

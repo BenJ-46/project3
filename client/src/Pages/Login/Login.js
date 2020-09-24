@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import {Switch, Route, Link } from 'react-router-dom'
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Button, Form, Container, Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
 import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
 import './Login.css'
+import { Router } from 'react-router-dom';
 
 const Login = (props) => {
 
@@ -24,13 +26,16 @@ const Login = (props) => {
       <FacebookLoginButton className="mt-3 mb-3" />
       <InstagramLoginButton className="mt-3 mb-3" />
       <div className="text-center">
-        <a href="/sign-up">Sign up</a>
+        <a href="/Signup">Sign up</a>
         <span className="p-2">|</span>
         <a href="/sign-up">Forgot Password</a>
       </div>
     </Form>
   );
 }
+
+
+
 
 export default Login
 
