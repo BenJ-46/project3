@@ -4,7 +4,6 @@ import { Container, Row, Col, Card } from 'reactstrap';
 
 const Login = (props) => {
 
-  
 
   return (
     <>
