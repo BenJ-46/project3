@@ -28,12 +28,12 @@ const User = new Schema({
         // type Array on mongoDB
         type: Array,
         required: true,
-        message: 'Please list languages'
+        // message: 'Please list languages'
     },
 
 }, { timestamps: true })
 
-User.plugin(require('passport-local-mongoose'))
+
 
 module.exports = model('User', User)
 

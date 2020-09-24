@@ -1,6 +1,5 @@
 module.exports = {
-  User: require('./User.js'),
-  Collab: require('./Collab.js')
+  User: require('./User.js')
 }
 
 
