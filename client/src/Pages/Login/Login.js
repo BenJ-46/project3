@@ -21,7 +21,7 @@ const Login = (props) => {
         <label >Password</label>
         <Input type="password" placeholder="Password" />
       </FormGroup>
-      <Button className="btn-lg btn-dark btn-block">Log in</Button>
+      <Button className="btn-lg btn-dark btn-block a text"><a className="text a"href="/Profile">Log in</a></Button>
       <div className="text-center pt-3">Or Log in via your social accounts</div>
       <FacebookLoginButton className="mt-3 mb-3" />
       <InstagramLoginButton className="mt-3 mb-3" />

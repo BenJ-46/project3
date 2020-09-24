@@ -34,15 +34,8 @@ const Signup = () => {
           <label >Dev History</label>
           <Input type="text" placeholder="Enter Dev History" />
         </FormGroup>
-        <Button className="btn-lg btn-dark btn-block"><a href="/Home">Sign up!</a></Button>
-        <div className="text-center pt-3">Or Log in via your social accounts</div>
-        
-        <div className="text-center">
-          <a href="/Home">Sign up</a>
-          <span className="p-2">|</span>
-          <a href="/sign-up">Forgot Password</a>
-        </div>
-      </Form>
+        <Button className="btn-lg btn-dark btn-block"><a className="text a"href="/Profile">Sign up!</a></Button>
+        </Form>
 
 
     </>

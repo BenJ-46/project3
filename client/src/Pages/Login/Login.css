@@ -10,3 +10,11 @@
   height: 100%
   
 }
+ .a:hover {
+   color: white
+}
+
+.text{
+  color:  white;
+  font-size: 5mm;
+  }
