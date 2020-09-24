@@ -30,9 +30,9 @@ const App = () => {
                     <NavItem>
                       <NavLink href="/">Login</NavLink>
                     </NavItem>
-                    <NavItem>
+                    {/* <NavItem>
                       <NavLink href="/Signup">Signup</NavLink>
-                    </NavItem>
+                    </NavItem> */}
                     <NavItem>
                       <NavLink href="/Home">Home</NavLink>
                     </NavItem>

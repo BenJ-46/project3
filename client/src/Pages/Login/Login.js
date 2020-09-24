@@ -11,8 +11,8 @@ const Login = (props) => {
 
   return (
     <Form className="login-form">
-      <h2 className="center"><span className="font-weight-bold">Sign up</span>/ Log in</h2>
-      <h5 className="center">Welcome to codeIn</h5>
+      <h2 className="center"><span className="font-weight-bold">Log in</span></h2>
+      <h5 className="center">Welcome back to codeIn</h5>
       <FormGroup className="center">
         <label >Email</label>
         <Input type="email" placeholder="Email" />
