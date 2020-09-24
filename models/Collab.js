@@ -1,6 +1,7 @@
 const { model, Schema } = require('mongoose')
 
-const Collab = new Schema(
+const Collab = new Schema({
+    
     name: {
         type: String,
         required: true
@@ -31,7 +32,7 @@ const Collab = new Schema(
         required: true
     },
 
- }, { timestamps: true })
+},{ timestamps: true })
 
 
 
