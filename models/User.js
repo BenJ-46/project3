@@ -14,14 +14,28 @@ const User = new Schema({
         type: String,
         unique: true,
         required: true
-    }
+    },
+    bio:
+    {
+        type: String,
+        required: true
+    },
+    devHist: {
+        type: String,
+        required: true
+    },
+    lang: {
+        // type Array on mongoDB
+        type: Array,
+        required: true,
+        message: 'Please list languages'
+    },
 
-    // items: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Item'
-    // }]
 }, { timestamps: true })
 
 User.plugin(require('passport-local-mongoose'))
 
 module.exports = model('User', User)
+
+
+    
