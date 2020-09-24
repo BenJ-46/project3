@@ -1,77 +1,41 @@
 import React, { useState } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { Container, Row, Col, Card } from 'reactstrap';
+import {Switch, Route, Link } from 'react-router-dom'
+// import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, Container, Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
+import { FacebookLoginButton } from 'react-social-login-buttons';
+import { InstagramLoginButton } from 'react-social-login-buttons';
+import './Login.css'
+import { Router } from 'react-router-dom';
 
 const Login = (props) => {
 
-  
-
   return (
-
-    <>
-      <Row>
-        <Col xs="6">
-
-          <Card>
-            <Form>
-              <FormGroup>
-                <Label for="exampleName">Name</Label>
-                <Input type="name" name="name" id="exampleName" placeholder="password placeholder" />
-              </FormGroup>
-              <FormGroup>
-                <Label for="exampleEmail">Email</Label>
-                <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-              </FormGroup>
-              <FormGroup>
-                <Label for="examplePassword">Password</Label>
-                <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
-              </FormGroup>
-              <FormGroup>
-                <Label for="exampleSelectMulti">Bio</Label>
-                <Input type="textarea" name="text" id="exampleText">
-                </Input>
-              </FormGroup>
-              <FormGroup>
-                <Label for="exampleText">Language</Label>
-                <Input type="textarea" name="text" id="exampleText" />
-              </FormGroup>
-              <FormGroup>
-                <Label for="exampleFile">Dev History</Label>
-                <Input type="textarea" name="text" id="exampleText" />
-                <FormText color="muted">
-                  Enter your developmental history within the last 3 years.
-              </FormText>
-              </FormGroup>
-
-              <Button>Sign up Now!</Button>
-            </Form>
-          </Card>
-
-
-        </Col>
-        <Col xs="6">
-          <Card>
-            <Form>
-              <FormGroup>
-                <Label for="exampleEmail">Email</Label>
-                <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-              </FormGroup>
-              <FormGroup>
-                <Label for="examplePassword">Password</Label>
-                <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
-              </FormGroup>
-
-              <Button>Sign in Now!</Button>
-            </Form>
-          </Card>
-
-
-        </Col>
-
-      </Row>
-    </>
+    <Form className="login-form">
+      <h2 className="center"><span className="font-weight-bold">Sign up</span>/ Log in</h2>
+      <h5 className="center">Welcome to codeIn</h5>
+      <FormGroup className="center">
+        <label >Email</label>
+        <Input type="email" placeholder="Email" />
+      </FormGroup>
+      <FormGroup className="center">
+        <label >Password</label>
+        <Input type="password" placeholder="Password" />
+      </FormGroup>
+      <Button className="btn-lg btn-dark btn-block">Log in</Button>
+      <div className="text-center pt-3">Or Log in via your social accounts</div>
+      <FacebookLoginButton className="mt-3 mb-3" />
+      <InstagramLoginButton className="mt-3 mb-3" />
+      <div className="text-center">
+        <a href="/Signup">Sign up</a>
+        <span className="p-2">|</span>
+        <a href="/sign-up">Forgot Password</a>
+      </div>
+    </Form>
   );
 }
+
+
+
 
 export default Login
 
@@ -86,7 +50,7 @@ export default Login
 // })
 
 // userState.handleRegisterChange = event => {
-  
+
 // }
 
 // userState.handleInputChange = event => {
