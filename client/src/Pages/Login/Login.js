@@ -6,6 +6,7 @@ const Login = (props) => {
 
 
   return (
+
     <>
       <Row>
         <Col xs="6">
@@ -24,7 +25,6 @@ const Login = (props) => {
                 <Label for="examplePassword">Password</Label>
                 <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
               </FormGroup>
-
               <FormGroup>
                 <Label for="exampleSelectMulti">Bio</Label>
                 <Input type="textarea" name="text" id="exampleText">
@@ -69,7 +69,7 @@ const Login = (props) => {
 
       </Row>
     </>
-  )
+  );
 }
 
 // export default Login

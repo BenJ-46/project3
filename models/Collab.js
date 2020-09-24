@@ -1,6 +1,6 @@
 const { model, Schema } = require('mongoose')
 
-const Collab = new Schema({
+const Collab = new Schema(
     name: {
         type: String,
         required: true
