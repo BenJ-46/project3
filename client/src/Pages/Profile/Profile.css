@@ -6,7 +6,7 @@
     background: linear-gradient(to left, #ec2F4B, #009FFF);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     text-align: center;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -17,11 +17,7 @@
     height: 100px;
     padding-top: 5em;
     padding-bottom: 1em;
-    border-radius: ;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    border-radius: 50%;
 }
 
 .banner-text {
@@ -48,6 +44,13 @@
     color: white;
     fontsize: 20 px;
     padding: 1em;
+    /* border-bottom: 5px dotted white; */
+}
+
+.bio-text h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 }
 
 .bio-text p1 {

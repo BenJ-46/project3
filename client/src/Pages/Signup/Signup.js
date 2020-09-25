@@ -6,6 +6,7 @@ import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
 import './Signup.css'
 import { Router } from 'react-router-dom';
+import Footer from '../../components/Footer';
 
 
 const Signup = () => {

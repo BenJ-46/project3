@@ -46,10 +46,11 @@
 // export default Profile
 
 
-import React from 'react'
-import {Grid, Cell} from 'react-mdl'
-import './Profile.css' 
-import { ButtonToggle }  from 'reactstrap'
+import React from 'react';
+import {Grid, Cell} from 'react-mdl';
+import './Profile.css' ;
+import { ButtonToggle }  from 'reactstrap';
+import Footer from '../../components/Footer';
 
 
 const Profile = () => {
@@ -73,6 +74,7 @@ const Profile = () => {
             <hr/>
             {/* This is where we would hard code in the landuages */}
 
+            <h2>Program Language</h2>
             
             <p>HTML/CSS | JavaScript | React | NodeJS | Jquery | C# | Express | MongoDB</p>
 
@@ -87,17 +89,19 @@ const Profile = () => {
             <div className="social-links">
 
               {/* Linkedin */}
-                <a href="http://google.com" rel="noopener noreferrer" target ="_blank">
+                <a href="http://linkedin.com" rel="noopener noreferrer" target ="_blank">
               <i className=" fa fa-linkedin-square" aria-hidden="true" />
               </a>
                 {/* Github */}
-                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                <a href="http://github.com" rel="noopener noreferrer" target="_blank">
                   <i className=" fa fa-github-square" aria-hidden="true" />
                 </a>
-                {/* Instagram */}
-                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-                  <i className=" fa fa--square" aria-hidden="true" />
+                {/* Linkedin */}
+                <a href="http://facebook.com" rel="noopener noreferrer" target="_blank">
+                  <i className=" fa fa-facebook-square" aria-hidden="true" />
                 </a>
+               
+                
 
             </div>
             </div>
@@ -108,7 +112,9 @@ const Profile = () => {
 
 
       </div>
-
+      
+        
+      <Footer /> 
 
     </>
   )
