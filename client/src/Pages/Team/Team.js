@@ -5,6 +5,7 @@ import Nic from '../../components/Assets/Images/nic4.png'
 import Dave from '../../components/Assets/Images/davecrop9.png'
 import Ben from '../../components/Assets/Images/bencrop.png'
 import './Team.css'
+import Footer from '../../components/Footer'
 
 const Team = () => {
   return (

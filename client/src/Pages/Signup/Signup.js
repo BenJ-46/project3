@@ -7,6 +7,7 @@ import { InstagramLoginButton } from 'react-social-login-buttons';
 import './Signup.css'
 import { Router } from 'react-router-dom';
 import axios from 'axios'
+import Footer from '../../components/Footer';
 
 
 const Signup = () => {
