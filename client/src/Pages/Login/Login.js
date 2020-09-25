@@ -36,8 +36,7 @@ const Login = (props) => {
       </div>
     </Form>
 
-    <Footer />
-
+    
     </>
   );
 }

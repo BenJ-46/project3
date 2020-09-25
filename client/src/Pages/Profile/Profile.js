@@ -114,7 +114,7 @@ const Profile = () => {
       </div>
       
         
-      <Footer /> 
+    
 
     </>
   )
