@@ -1,16 +1,16 @@
-// import React from 'react'
+import React from 'react'
 
-// const Collab = () => {
-//   return (
-//     <>
-//     <h1>Collab Page</h1>
+const Collab = () => {
+  return (
+    <>
+    <h1>Collab Page</h1>
 
 
-//     </>
-//   )
-// }
+    </>
+  )
+}
 
-// export default Collab
+export default Collab
 
 // import React, { useState } from 'react';
 // import {

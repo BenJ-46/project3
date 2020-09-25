@@ -15,9 +15,10 @@ const Signup = () => {
   const [userState, setUserState] = useState({
     name:'',
     email:'',
+    username: '',
     password:'',
     bio:'',
-    language:'',
+    language:[],
     devHistory:'',
     user: []
   })
@@ -31,11 +32,12 @@ const Signup = () => {
     event.preventDefault()
     axios.post('/api/users', {
       name: userState.name,
+      username: userState.username,
       email: userState.email,
       password: userState.password,
       bio: userState.bio,
-      language: userState.language,
-      devHistory: userState.history
+      lang: userState.language,
+      devHist: userState.devHistory
     }).then( data => {
 
       localStorage.setItem('user', userState.name)
@@ -43,7 +45,7 @@ const Signup = () => {
     })
     .catch(err => console.log(err))
 }
-  
+ 
  
   return (
     <>
@@ -55,26 +57,31 @@ const Signup = () => {
           <Input 
           type="name"
           name="name" 
-          value={userState.name}
           onChange={userState.handleInputChange}
           placeholder="name" />
+        </FormGroup>
+        <FormGroup className="center">
+          <label >username</label>
+          <Input 
+          type="username"
+          name="username" 
+          onChange={userState.handleInputChange}
+          placeholder="Username" />
         </FormGroup>
         <FormGroup className="center">
           <label >Email</label>
           <Input 
           type="email"
           name="email" 
-          value={userState.email}
           onChange={userState.handleInputChange}
           placeholder="Email" />
         </FormGroup>
         <FormGroup className="center">
           <label >Password</label>
           <Input 
-          type="password"
+          type="text"
           name="password"
-          value={userState.password}
-          onClick={userState.handleInputChange}
+          onChange={userState.handleInputChange}
           placeholder="Password" />
         </FormGroup>
         <FormGroup className="center">
@@ -82,8 +89,7 @@ const Signup = () => {
           <Input 
           type="text" 
           name="bio"
-          value={userState.bio}
-          onClick={userState.handleInputChange}
+          onChange={userState.handleInputChange}
           placeholder="Bio" />
         </FormGroup>
         <FormGroup className="center">
@@ -91,9 +97,17 @@ const Signup = () => {
           <Input 
           type="text" 
           name="language"
-          // coffee app ex)
-          value={userState.language}
-          onClick={userState.handleInputChange}
+          onChange={userState.handleInputChange}
+          placeholder="Enter known Languages" />
+          <Input 
+          type="text" 
+          name="language"
+          onChange={userState.handleInputChange}
+          placeholder="Enter known Languages" />
+          <Input 
+          type="text" 
+          name="language"
+          onChange={userState.handleInputChange}
           placeholder="Enter known Languages" />
         </FormGroup>
         <FormGroup className="center">
@@ -101,12 +115,11 @@ const Signup = () => {
           <Input 
           type="text"
           name="devHistory"
-          value={userState.devHistory}
-          onClick={userState.handleInputChange}
+          onChange={userState.handleInputChange}
           placeholder="Enter Dev History" />
         </FormGroup>
         <Button 
-        onclick={userState.handleRegisterChange}
+        onClick={userState.handleRegisterChange}
         className="btn-lg btn-dark btn-block">
         <a className="text a"href="/Profile">Sign up!</a>
         </Button>
