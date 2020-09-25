@@ -73,7 +73,7 @@ const Login = (props) => {
   );
 }
 
-// export default Login
+export default Login
 
 // const [userState, setUserState] = userState({
 //   name: '',
