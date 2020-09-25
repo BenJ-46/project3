@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { Button, Form, Container, Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormText, Container, Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
 import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
 import './Signup.css'
@@ -53,7 +53,7 @@ const Signup = () => {
         <FormGroup className="center">
           <label >Name</label>
           <Input 
-          type="text"
+          type="name"
           name="name" 
           value={userState.name}
           onChange={userState.handleInputChange}
@@ -72,6 +72,7 @@ const Signup = () => {
           <label >Password</label>
           <Input 
           type="password"
+          name="password"
           value={userState.password}
           onClick={userState.handleInputChange}
           placeholder="Password" />
@@ -80,6 +81,7 @@ const Signup = () => {
           <label >Bio</label>
           <Input 
           type="text" 
+          name="bio"
           value={userState.bio}
           onClick={userState.handleInputChange}
           placeholder="Bio" />
@@ -88,6 +90,8 @@ const Signup = () => {
           <label >Known Languages</label>
           <Input 
           type="text" 
+          name="language"
+          // coffee app ex)
           value={userState.language}
           onClick={userState.handleInputChange}
           placeholder="Enter known Languages" />
@@ -96,6 +100,7 @@ const Signup = () => {
           <label >Dev History</label>
           <Input 
           type="text" 
+          name="devHistory"
           value={userState.devHistory}
           onClick={userState.handleInputChange}
           placeholder="Enter Dev History" />
