@@ -99,7 +99,7 @@ const Signup = () => {
         <FormGroup className="center">
           <label >Dev History</label>
           <Input 
-          type="text" 
+          type="text"
           name="devHistory"
           value={userState.devHistory}
           onClick={userState.handleInputChange}
