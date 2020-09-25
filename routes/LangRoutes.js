@@ -1,8 +1,8 @@
 // const router = require('express').Router()
-// const { Collab } = require('../models')
+// const { Lang } = require('../models')
 
 // // Get All Collabs
-// router.get('/collabs/:id', (req, res) => {
+// router.get('/collabs/', (req, res) => {
 //   Collab.findById(req.params.id)
 //     .then(collab => res.json(collab))
 //     .catch(err => console.error(err))
