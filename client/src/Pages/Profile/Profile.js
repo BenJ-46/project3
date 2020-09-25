@@ -29,6 +29,8 @@ const Profile = () => {
 
             <hr/>
             {/* This is where we would hard code in the landuages */}
+            <h3>Username</h3>
+            <h4>Email</h4>
 
             <h2>Program Language</h2>
             
