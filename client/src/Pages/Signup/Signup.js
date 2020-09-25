@@ -6,6 +6,7 @@ import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
 import './Signup.css'
 import { Router } from 'react-router-dom';
+import axios from 'axios'
 
 
 const Signup = () => {
@@ -35,6 +36,7 @@ const Signup = () => {
       language: userState.language,
       devHistory: userState.history
     }).then( data => {
+
       localStorage.setItem('user', userState.name)
       window.location = '/Profile'
     })
