@@ -16,7 +16,7 @@ const Signup = () => {
     password:'',
     bio:'',
     language:'',
-    history:'',
+    devHistory:'',
     user: []
   })
   
@@ -33,14 +33,15 @@ const Signup = () => {
       password: userState.password,
       bio: userState.bio,
       language: userState.language,
-      history: userState.history
+      devHistory: userState.history
     }).then( data => {
-      localStorage.setItem('tempName', )
+      localStorage.setItem('user', userState.name)
+      window.location = '/Profile'
     })
+    .catch(err => console.log(err))
 }
   
  
-
   return (
     <>
       <Form className="login-form">
@@ -92,7 +93,7 @@ const Signup = () => {
           <label >Dev History</label>
           <Input 
           type="text" 
-          value={userState.history}
+          value={userState.devHistory}
           onClick={userState.handleInputChange}
           placeholder="Enter Dev History" />
         </FormGroup>
