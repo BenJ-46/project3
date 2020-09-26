@@ -16,7 +16,7 @@ const Profile = () => {
   savedState.handleInfoSaved = id => {
     axios.get('/api/users')
     .then(() => {
-      let saved = savedState.saved.filter(user => user._id !== id)
+      let saved = savedState.saved.filter(user => user._id === id)
       setSavedState({ ...savedState, saved})
     })
   }
