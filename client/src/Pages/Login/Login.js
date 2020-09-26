@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Switch, Route, Link } from 'react-router-dom'
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Button, Form, Container, Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
@@ -10,6 +10,9 @@ import { Router } from 'react-router-dom';
 import Footer from '../../components/Footer'
 
 const Login = (props) => {
+
+  
+
 
   return (
 
@@ -35,8 +38,6 @@ const Login = (props) => {
         <a href="/sign-up">Forgot Password</a>
       </div>
     </Form>
-
-    
     </>
   );
 }
@@ -46,20 +47,4 @@ const Login = (props) => {
 
 export default Login
 
-// const [userState, setUserState] = userState({
-//   name: '',
-//   email: '',
-//   password: '',
-//   bio: '',
-//   Language: '',
-//   History: '',
-//   user: []
-// })
 
-// userState.handleRegisterChange = event => {
-
-// }
-
-// userState.handleInputChange = event => {
-//   setUserState({ ...userState, [event.target.name]: event.target.value })
-// }
