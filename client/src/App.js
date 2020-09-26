@@ -42,6 +42,7 @@ const App = () => {
                   <NavItem>
                     <NavLink href="/Team">Team</NavLink>
                   </NavItem>
+                    
                 </Nav>
               </Collapse>
             </Navbar>
@@ -52,7 +53,7 @@ const App = () => {
             <Route path="/Collab" component={Collab} />
             <Route path="/Team" component={Team} />
               <Route path="/Signup" component={Signup} />
-          </Switch>
+             </Switch>
           </Router>
 
         
