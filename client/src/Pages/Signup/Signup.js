@@ -38,7 +38,8 @@ const Signup = () => {
       bio: userState.bio,
       lang: userState.language,
       devHist: userState.devHistory
-    }).then( data => {
+    })
+    .then( data => {
 
       localStorage.setItem('user', userState.name)
       window.location = '/Profile'

@@ -38,8 +38,6 @@ const Login = (props) => {
         <a href="/sign-up">Forgot Password</a>
       </div>
     </Form>
-
-    
     </>
   );
 }
