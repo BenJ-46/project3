@@ -27,7 +27,8 @@ const Search = () => {
     { name: "MySQL", },
     { name: "Axios", },
     { name: "jQuery", },
-    { name: "Bootstrap", }
+    { name: "Bootstrap", },
+    
    
 
   ];
@@ -45,7 +46,7 @@ const Search = () => {
   return (
   
     <div className="search-box">
-      <input className=""
+      <input className="search-txt"
         type="text"
         placeholder="Desired Language"
         onChange={handleChange}
