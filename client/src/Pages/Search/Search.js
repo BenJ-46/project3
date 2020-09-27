@@ -3,6 +3,8 @@ import { Switch, Route, Link } from 'react-router-dom'
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Container, Row, Col, Card,  } from 'reactstrap';
 import './Search.css'
+import { FaSearch } from 'react-icons/fa';
+
 
 
 import { Router } from 'react-router-dom';
@@ -48,18 +50,20 @@ const Search = () => {
     <div className="search-box">
       <input className="search-txt"
         type="text"
-        placeholder="Desired Language"
+        placeholder="Search"
         onChange={handleChange}
         value={input} />
-        <a className="search-btn" href="#"></a>
+        <a className="search-btn" href="#"><FaSearch/></a>
       {languages.map((language, index) => {
 
         return (
           <>
-          
+            
+          <div body></div>
 
             <div key={index}>
          
+        
                 <ul>{language.name}</ul>
               
             </div>
