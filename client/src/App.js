@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Login from './Pages/Login'
+import Search from './Pages/Search'
 import Signup from './Pages/Signup'
 import Profile from './Pages/Profile'
 import Collab from './Pages/Collab'
@@ -30,6 +31,9 @@ const App = () => {
                     <NavItem>
                       <NavLink href="/">Login</NavLink>
                     </NavItem>
+                    <NavItem>
+                      <NavLink href="/Search">Search</NavLink>
+                    </NavItem>
                     {/* <NavItem>
                       <NavLink href="/Signup">Signup</NavLink>
                     </NavItem> */}
@@ -49,6 +53,7 @@ const App = () => {
           </div>
           <Switch>
             <Route exact path="/" component={Login} />
+              <Route exact path="/Search" component={Search} />
               <Route path="/Profile" component={Profile} />
             <Route path="/Collab" component={Collab} />
             <Route path="/Team" component={Team} />
