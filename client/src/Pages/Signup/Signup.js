@@ -8,6 +8,7 @@ import './Signup.css'
 import { Router } from 'react-router-dom';
 import axios from 'axios'
 import Footer from '../../components/Footer';
+import API from '../../utils/API';
 
 
 const Signup = () => {
@@ -28,6 +29,15 @@ const Signup = () => {
     setUserState({ ...userState, [event.target.name]: event.target.value })
   }
 
+  userState.handleSavedUser = userID => {
+    const saveUser = userState.user.filter(x => x.userID === userID)[0]
+    API.saveUser(saveUser)
+    .then(() => {
+      const user = userState.user.filter(x => x.userID !== userID)
+      setUserState({ ...userState, user})
+    })
+  }
+
   userState.handleRegisterChange = event => {
     event.preventDefault()
     axios.post('/api/users', {
@@ -46,7 +56,6 @@ const Signup = () => {
     })
     .catch(err => console.log(err))
 }
- 
  
   return (
     <>

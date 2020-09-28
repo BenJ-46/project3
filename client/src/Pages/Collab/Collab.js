@@ -2,12 +2,16 @@
 
 
 
-import React from "react";
 import "@brainhubeu/react-carousel/lib/style.css";
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import { Card ,  Button} from "reactstrap"
 import { Cell } from "react-mdl"
 import './Collab.css'
+
+import React, { useState, useEffect } from 'react'
+import API from '../../utils/API'
+
+
 
  import Image1 from "../../components/Assets/Images/nic4.png";
  import Image2 from "../../components/Assets/Images/bencrop.png";
@@ -15,9 +19,31 @@ import './Collab.css'
 
 
 
- const Portfolio = () => {
+ const Collab = () => {
+   const [savedState, setSavedState] = useState({
+     saved: []
+   })
 
+   useEffect((console.log('ping')))
+
+   useEffect(() => {
+     API.getSavedUser()
+       .then(({ data }) => {
+         setSavedState({ ...savedState, saved: data })
+       })
+   })
+
+   useEffect(() => {
+     API.getUser(localStorage.getItem('user'))
+       .then(({ data }) => {
+         setSavedState({ ...savedState, saved: data })
+       })
+   })
+
+  
   return (
+
+    
     <>
    <div
      className="App"
@@ -112,6 +138,7 @@ import './Collab.css'
   )
   }
 
- export default Portfolio;
+ export default Collab;
+
 
 
