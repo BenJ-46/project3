@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Grid, Cell } from 'react-mdl'
 import './Profile.css'
-import { ButtonToggle } from 'reactstrap'
+import { ButtonToggle, Button } from 'reactstrap'
 import Footer from '../../components/Footer'
-import axios from 'axios'
 import API from '../../utils/API'
 
 
@@ -13,16 +12,8 @@ const Profile = () => {
     saved: []
   })
 
-  savedState.handleInfoSaved = id => {
-    axios.get('/api/users')
-    .then(() => {
-      let saved = savedState.saved.filter(user => user._id !== id)
-      setSavedState({ ...savedState, saved})
-    })
-  }
-
   useEffect(() => {
-    API.getSavedUser()
+    API.getUser(localStorage.getItem('user'))
       .then(({ data }) => {
         setSavedState({ ...savedState, saved: data})
       })
@@ -53,7 +44,7 @@ const Profile = () => {
                     <h3>{user.username}</h3>
                     <h4>{user.email}</h4>
 
-                    <h2>{user.lang[0]}</h2>
+                    <h2>{user.lang}</h2>
                     {/* <h2>{user.lang[1]}</h2>
                     <h2>{user.lang[2]}</h2> */}
 
