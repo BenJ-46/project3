@@ -7,11 +7,11 @@ router.get('/users', (req, res) => {
     .catch(err => console.error(err))
 })
 
-// router.get('/users/:id', (req, res) => {
-//   User.findById(req.params.id)
-//     .then(user => res.json(user))
-//     .catch(err => console.error(err))
-// })
+router.get('/users/:name', (req, res) => {
+  User.find({name: req.params.name})
+    .then(user => res.json(user))
+    .catch(err => console.error(err))
+})
 
 // router.get('/users/un/:username', (req, res) => {
 //   User.find({ username: req.params.username })

@@ -1,16 +1,50 @@
-import React from 'react'
+import Axios from 'axios'
+import React, { useEffect } from 'react'
+import API from '../../utils/API'
+
+// useEffect((id) => {
+//     API.getSavedUser(id)
+//     .then(() => {
+//       let savedState = saved
+//       let saved = savedState.saved.filter(user => user._id !== id)
+//       setSavedState({ ...savedState, saved: user._id})
+//     })
+//   })
+
+  // useEffect(() => {
+  //   API.getSavedUser()
+  //     .then(({ data }) => {
+  //       setSavedState({ ...savedState, saved: data})
+  //     })
+  // })
 
 const Collab = () => {
+
+  const [savedState, setSavedState] = useState({
+    saved: []
+  })
+
+  useEffect(() => {
+    API.getSavedUser()
+    .then(({ data }) => {
+      setSavedState({ ...savedState, saved: data})
+    })
+  })
+
+
   return (
     <>
+    
     <h1>Collab Page</h1>
-
 
     </>
   )
 }
 
 export default Collab
+
+
+
 
 // import React, { useState } from 'react';
 // import {
