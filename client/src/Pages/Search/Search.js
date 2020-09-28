@@ -4,9 +4,6 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Container, Row, Col, Card,  } from 'reactstrap';
 import './Search.css'
 import { FaSearch } from 'react-icons/fa';
-
-
-
 import { Router } from 'react-router-dom';
 import Footer from '../../components/Footer';
 
@@ -30,10 +27,7 @@ const Search = () => {
     { name: "Axios", },
     { name: "jQuery", },
     { name: "Bootstrap", },
-    
-   
-
-  ];
+    ];
 
   const handleChange = (e) => {
     e.preventDefault()
