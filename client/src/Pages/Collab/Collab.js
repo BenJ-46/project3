@@ -1,137 +1,64 @@
-import React from 'react'
+// import React from 'react'
 
-const Collab = () => {
-  return (
-    <>
-    <h1>Collab Page</h1>
-
-
-    </>
-  )
-}
-
-export default Collab
-
-// import React, { useState } from 'react';
-// import {
-//   Carousel,
-//   CarouselItem,
-//   CarouselControl,
-//   CarouselIndicators,
-//   CarouselCaption
-// } from 'reactstrap';
-
-// const items = [
-//   {
-//     id: 1,
-//     altText: 'Slide 1',
-//     caption: 'Slide 1'
-//   },
-//   {
-//     id: 2,
-//     altText: 'Slide 2',
-//     caption: 'Slide 2'
-//   },
-//   {
-//     id: 3,
-//     altText: 'Slide 3',
-//     caption: 'Slide 3'
-//   },
-//   {
-//     id:4 ,
-//     altText: 'Slide 4',
-//     caption: 'Slide 4'
-//   },
-//   {
-//     id: 5,
-//     altText: 'Slide 5',
-//     caption: 'Slide 5'
-//   },
-//   {
-//     id: 6,
-//     altText: 'Slide 6',
-//     caption: 'Slide 6'
-//   },
-//   {
-//     id: 7,
-//     altText: 'Slide 7',
-//     caption: 'Slide 7'
-//   },
-//   {
-//     id: 8,
-//     altText: 'Slide 8',
-//     caption: 'Slide 8'
-//   },
-//   {
-//     id: 9,
-//     altText: 'Slide 9',
-//     caption: 'Slide 9'
-//   },
-//   {
-//     id: 10,
-//     altText: 'Slide 10',
-//     caption: 'Slide 10'
-//   }
-// ];
-
-// const Example = (props) => {
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const [animating, setAnimating] = useState(false);
-
-//   const next = () => {
-//     if (animating) return;
-//     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-//     setActiveIndex(nextIndex);
-//   }
-
-//   const previous = () => {
-//     if (animating) return;
-//     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-//     setActiveIndex(nextIndex);
-//   }
-
-//   const goToIndex = (newIndex) => {
-//     if (animating) return;
-//     setActiveIndex(newIndex);
-//   }
-
-//   const slides = items.map((item) => {
-//     return (
-//       <CarouselItem
-//         className="custom-tag"
-//         tag="div"
-//         key={item.id}
-//         onExiting={() => setAnimating(true)}
-//         onExited={() => setAnimating(false)}
-//       >
-//         <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} />
-//       </CarouselItem>
-//     );
-//   });
-
+// const Collab = () => {
 //   return (
-//     <div>
-//       <style>
-//         {
-//           `.custom-tag {
-//               max-width: 100%;
-//               height: 500px;
-//               background: black;
-//             }`
-//         }
-//       </style>
-//       <Carousel
-//         activeIndex={activeIndex}
-//         next={next}
-//         previous={previous}
-//       >
-//         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-//         {slides}
-//         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-//         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-//       </Carousel>
-//     </div>
-//   );
+//     <>
+//     <h1>Collab Page</h1>
+
+
+//     </>
+//   )
 // }
 
-// export default Example;
+// export default Collab
+/* #endregion */
+/* #region Card */
+/* Card */
+
+// import React from "react";
+// import Carousel from "@brainhubeu/react-carousel";
+// import "@brainhubeu/react-carousel/lib/style.css";
+// import { Card } from "reactstrap"
+
+// import Image1 from "../../components/Assets/Images/nic4.png";
+// import Image2 from "../../components/Assets/Images/bencrop.png";
+// import Image3 from "../../components/Assets/Images/kalyncrop.png";
+
+
+
+// const Portfolio = () => (
+//   <div
+//     className="App"
+//     style={{ width: "1000px", margin:"auto", padding: "50px" }}
+//   >
+    {/* <Carousel arrows infinite>
+      <Card>
+        <img src={Image1} />
+      </Card>
+    </Carousel> */}
+    // <Carousel arrows infinite>
+    //   <Card>
+    //     <img style={{ height: "600px", paddingtop:"5em", padding:"1em", margin:"auto"}}
+    //       src="https://images.unsplash.com/photo-1592158169526-9deda479afce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=783&q=80"
+    //       alt="avatar"
+    //       className="avatar-img" />
+       
+    //    <h1>Hello World</h1>
+    //   </Card>
+  
+    //   <Card>
+    //     <img src={Image3} />
+    //   </Card>
+    // </Carousel>
+
+
+      
+      {/* <img src={Image2} />
+      <img src={Image3} />
+    </Carousel> */}
+//   </div>
+// );
+
+// export default Portfolio;
+
+
