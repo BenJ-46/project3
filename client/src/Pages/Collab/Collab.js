@@ -16,35 +16,35 @@ import API from '../../utils/API'
  import Image1 from "../../components/Assets/Images/nic4.png";
  import Image2 from "../../components/Assets/Images/bencrop.png";
  import Image3 from "../../components/Assets/Images/kalyncrop.png";
-
-
+import Search from '../Search/Search.js'
 
  const Collab = () => {
-   const [savedState, setSavedState] = useState({
-     saved: []
-   })
+  //  const [savedState, setSavedState] = useState({
+  //    saved: []
+  //  })
 
-   useEffect((console.log('ping')))
+//    useEffect((console.log('ping')))
 
-   useEffect(() => {
-     API.getSavedUser()
-       .then(({ data }) => {
-         setSavedState({ ...savedState, saved: data })
-       })
-   })
+//    useEffect(() => {
+//      API.getSavedUser()
+//        .then(({ data }) => {
+//          setSavedState({ ...savedState, saved: data })
+//        })
+//    })
 
-   useEffect(() => {
-     API.getUser(localStorage.getItem('user'))
-       .then(({ data }) => {
-         setSavedState({ ...savedState, saved: data })
-       })
-   })
+//    useEffect(() => {
+//      API.getUser(localStorage.getItem('user'))
+//        .then(({ data }) => {
+//          setSavedState({ ...savedState, saved: data })
+//        })
+//    })
 
   
   return (
 
     
     <>
+    <Search/>
    <div
      className="App"
      style={{ width: "1000px", margin:"auto", padding: "50px" }}

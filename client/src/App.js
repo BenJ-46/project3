@@ -31,9 +31,9 @@ const App = () => {
                     <NavItem>
                       <NavLink href="/">Login</NavLink>
                     </NavItem>
-                    <NavItem>
+                    {/* <NavItem>
                       <NavLink href="/Search">Search</NavLink>
-                    </NavItem>
+                    </NavItem> */}
                     {/* <NavItem>
                       <NavLink href="/Signup">Signup</NavLink>
                     </NavItem> */}
@@ -53,7 +53,7 @@ const App = () => {
           </div>
           <Switch>
             <Route exact path="/" component={Login} />
-              <Route exact path="/Search" component={Search} />
+              {/* <Route exact path="/Search" component={Search} /> */}
               <Route path="/Profile" component={Profile} />
             <Route path="/Collab" component={Collab} />
             <Route path="/Team" component={Team} />
