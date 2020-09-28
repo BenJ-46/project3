@@ -134,11 +134,7 @@ import Search from '../Search/Search.js'
   )
   }
 
-<<<<<<< HEAD
-  export default Collab
-=======
  export default Collab;
 
->>>>>>> d40c1c4c58181606889d79152b5716d85f5ff351
 
 
