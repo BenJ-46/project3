@@ -4,9 +4,9 @@ import { Switch, Route, Link } from 'react-router-dom'
 import { Button, Form, FormText, Container, Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
 import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
-import './Signup.css'
+import './Signup.css';
 import { Router } from 'react-router-dom';
-import axios from 'axios'
+import axios from 'axios';
 import Footer from '../../components/Footer';
 import API from '../../utils/API';
 

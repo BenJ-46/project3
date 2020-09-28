@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import './Footer.css'
+import { FaPhoneAlt } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
+import { AiOutlinePhone } from 'react-icons/ai';
 
 const Footer = () => {
   return (
@@ -13,7 +16,8 @@ const Footer = () => {
           <div className="col">
             <h4>Contact</h4>
             <ul className="list-unstyled">
-              <li>(619) 555-5555</li>
+                <li> <AiOutlinePhone/> (619) 555-5555</li>
+                <li> <AiOutlineMail/> codeIn@customerserice.com</li>
               <li>San Diego,CA</li>
               <li>905 California Street</li>
             </ul>

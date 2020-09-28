@@ -1,171 +1,144 @@
-import Axios from 'axios'
-import React, { useEffect, useState } from 'react'
+
+
+
+
+import "@brainhubeu/react-carousel/lib/style.css";
+import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import { Card ,  Button} from "reactstrap"
+import { Cell } from "react-mdl"
+import './Collab.css'
+
+import React, { useState, useEffect } from 'react'
 import API from '../../utils/API'
 
-// useEffect((id) => {
-//     API.getSavedUser(id)
-//     .then(() => {
-//       let savedState = saved
-//       let saved = savedState.saved.filter(user => user._id !== id)
-//       setSavedState({ ...savedState, saved: user._id})
-//     })
-//   })
-
-  // useEffect(() => {
-  //   API.getSavedUser()
-  //     .then(({ data }) => {
-  //       setSavedState({ ...savedState, saved: data})
-  //     })
-  // })
-
-const Collab = () => {
-
-  const [savedState, setSavedState] = useState({
-    saved: []
-  })
-
-  useEffect(() => {
-    API.getSavedUser()
-    .then(({ data }) => {
-      setSavedState({ ...savedState, saved: data})
-    })
-  })
 
 
+ import Image1 from "../../components/Assets/Images/nic4.png";
+ import Image2 from "../../components/Assets/Images/bencrop.png";
+ import Image3 from "../../components/Assets/Images/kalyncrop.png";
+import Search from '../Search/Search.js'
+
+ const Collab = () => {
+  //  const [savedState, setSavedState] = useState({
+  //    saved: []
+  //  })
+
+//    useEffect((console.log('ping')))
+
+//    useEffect(() => {
+//      API.getSavedUser()
+//        .then(({ data }) => {
+//          setSavedState({ ...savedState, saved: data })
+//        })
+//    })
+
+//    useEffect(() => {
+//      API.getUser(localStorage.getItem('user'))
+//        .then(({ data }) => {
+//          setSavedState({ ...savedState, saved: data })
+//        })
+//    })
+
+  
   return (
-    <>
+
     
-    <h1>Collab Page</h1>
+    <>
+    <Search/>
+   <div
+     className="App"
+     style={{ width: "1000px", margin:"auto", padding: "50px" }}
+   >
 
-    </>
+ <Carousel arrows infinite>
+   <Card>
+     <img style={{ height: "400px", paddingtop:"5em", padding:"1em", margin:"auto"}}
+       src="https:images.unsplash.com/photo-1592158169526-9deda479afce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=783&q=80"
+       alt="avatar"
+       className="avatar-img" />
+
+    <h1>Lisa Simpson</h1>
+    <h2><b><span>Language</span></b></h2>
+    <h3>Username</h3>
+    <h3>bio</h3>
+         <Button color="warning" size="lg" block>Let's Collab</Button>
+         <Button color="warning" size="lg" block>Maybe Next time!</Button>
+
+       
+   </Card>
+       <Card>
+         <img style={{ height: "400px", paddingtop: "5em", padding: "1em", margin: "auto" }}
+           src="https:images.unsplash.com/photo-1592158169526-9deda479afce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=783&q=80"
+           alt="avatar"
+           className="avatar-img" />
+
+         <h1>Bart Simpson</h1>
+         <h2><b><span>Language</span></b></h2>
+         <h3>Username</h3>
+         <h3>bio</h3>
+         <Button color="warning" size="lg" block>Let's Collab</Button>
+         <Button color="warning" size="lg" block>Maybe Next time!</Button>
+
+
+       </Card>
+       <Card>
+         <img style={{ height: "400px", paddingtop: "5em", padding: "1em", margin: "auto" }}
+           src="https:images.unsplash.com/photo-1592158169526-9deda479afce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=783&q=80"
+           alt="avatar"
+           className="avatar-img" />
+
+         <h1>Homer Simpson</h1>
+         <h2><b><span>Language</span></b></h2>
+         <h3>Username</h3>
+         <h3>bio</h3>
+         <Button color="warning" size="lg" block>Let's Collab</Button>
+         <Button color="warning" size="lg" block>Maybe Next time!</Button>
+
+
+       </Card>
+       <Card>
+         <img style={{ height: "400px", paddingtop: "5em", padding: "1em", margin: "auto" }}
+           src="https:images.unsplash.com/photo-1592158169526-9deda479afce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=783&q=80"
+           alt="avatar"
+           className="avatar-img" />
+
+         <h1>Marge Simpson</h1>
+         <h2><b><span>Language</span></b></h2>
+         <h3>Username</h3>
+         <h3>bio</h3>
+         <Button color="warning" size="lg" block>Let's Collab</Button>
+         <Button color="warning" size="lg" block>Maybe Next time!</Button>
+
+
+       </Card>
+       <Card>
+         <img style={{ height: "400px", paddingtop: "5em", padding: "1em", margin: "auto" }}
+           src="https:images.unsplash.com/photo-1592158169526-9deda479afce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=783&q=80"
+           alt="avatar"
+           className="avatar-img" />
+
+         <h1>santa's little helper Simpson</h1>
+         <h2><b><span>Language</span></b></h2>
+         <h3>Username</h3>
+         <h3>bio</h3>
+         <Button color="warning" size="lg" block>Let's Collab</Button>
+         <Button color="warning" size="lg" block>Maybe Next time!</Button>
+
+
+       </Card>
+
+   
+ </Carousel>
+
+
+
+
+   </div>
+   </>
   )
-}
+  }
 
-export default Collab
-
-
+ export default Collab;
 
 
-// import React, { useState } from 'react';
-// import {
-//   Carousel,
-//   CarouselItem,
-//   CarouselControl,
-//   CarouselIndicators,
-//   CarouselCaption
-// } from 'reactstrap';
 
-// const items = [
-//   {
-//     id: 1,
-//     altText: 'Slide 1',
-//     caption: 'Slide 1'
-//   },
-//   {
-//     id: 2,
-//     altText: 'Slide 2',
-//     caption: 'Slide 2'
-//   },
-//   {
-//     id: 3,
-//     altText: 'Slide 3',
-//     caption: 'Slide 3'
-//   },
-//   {
-//     id:4 ,
-//     altText: 'Slide 4',
-//     caption: 'Slide 4'
-//   },
-//   {
-//     id: 5,
-//     altText: 'Slide 5',
-//     caption: 'Slide 5'
-//   },
-//   {
-//     id: 6,
-//     altText: 'Slide 6',
-//     caption: 'Slide 6'
-//   },
-//   {
-//     id: 7,
-//     altText: 'Slide 7',
-//     caption: 'Slide 7'
-//   },
-//   {
-//     id: 8,
-//     altText: 'Slide 8',
-//     caption: 'Slide 8'
-//   },
-//   {
-//     id: 9,
-//     altText: 'Slide 9',
-//     caption: 'Slide 9'
-//   },
-//   {
-//     id: 10,
-//     altText: 'Slide 10',
-//     caption: 'Slide 10'
-//   }
-// ];
-
-// const Example = (props) => {
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const [animating, setAnimating] = useState(false);
-
-//   const next = () => {
-//     if (animating) return;
-//     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-//     setActiveIndex(nextIndex);
-//   }
-
-//   const previous = () => {
-//     if (animating) return;
-//     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-//     setActiveIndex(nextIndex);
-//   }
-
-//   const goToIndex = (newIndex) => {
-//     if (animating) return;
-//     setActiveIndex(newIndex);
-//   }
-
-//   const slides = items.map((item) => {
-//     return (
-//       <CarouselItem
-//         className="custom-tag"
-//         tag="div"
-//         key={item.id}
-//         onExiting={() => setAnimating(true)}
-//         onExited={() => setAnimating(false)}
-//       >
-//         <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} />
-//       </CarouselItem>
-//     );
-//   });
-
-//   return (
-//     <div>
-//       <style>
-//         {
-//           `.custom-tag {
-//               max-width: 100%;
-//               height: 500px;
-//               background: black;
-//             }`
-//         }
-//       </style>
-//       <Carousel
-//         activeIndex={activeIndex}
-//         next={next}
-//         previous={previous}
-//       >
-//         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-//         {slides}
-//         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-//         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-//       </Carousel>
-//     </div>
-//   );
-// }
-
-// export default Example;
