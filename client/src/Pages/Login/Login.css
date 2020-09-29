@@ -1,20 +1,35 @@
-.center{
+.center {
   text-align: center;
 }
 
-.login-form{
+.login-form {
   width: 100%;
   max-width: 330px;
   padding: 15px;
   margin: auto;
-  height: 100%
-  
-}
- .a:hover {
-   color: white
+  height: 100%;
+  background: #22c1c3;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fdbb2d, #22c1c3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.text{
-  color:  white;
+.a:hover {
+  color: white
+}
+
+.text {
+  color: white;
   font-size: 5mm;
-  }
+}
+
+.layout {
+  background: #2980B9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

@@ -15,7 +15,7 @@ const Profile = () => {
   useEffect(() => {
     API.getUser(localStorage.getItem('user'))
       .then(({ data }) => {
-        setSavedState({ ...savedState, saved: data})
+        setSavedState({ ...savedState, saved: data })
       })
   })
 
@@ -45,7 +45,7 @@ const Profile = () => {
                     <h3>{user.username}</h3>
                     <h4>{user.email}</h4>
 
-          <h2>{user.lang[0]}| {user.lang[0]} | {user.lang[0]}</h2>
+                    <h2>{user.lang[0]}| {user.lang[0]} | {user.lang[0]}</h2>
                     {/* <h2>{user.lang[1]}</h2>
                     <h2>{user.lang[2]}</h2> */}
 
@@ -53,11 +53,11 @@ const Profile = () => {
                     {/* <p>HTML/CSS | JavaScript | React | NodeJS | Jquery | C# | Express | MongoDB</p> */}
 
                     <div className="bio-text">
-                    <h2>{user.bio}</h2>
+                      <h2>{user.bio}</h2>
 
                       <hr />
 
-                    <p1>{user.devHist}</p1>
+                      <p1>{user.devHist}</p1>
 
                     </div>
                     <div className="social-links">
