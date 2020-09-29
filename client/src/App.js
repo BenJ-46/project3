@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Login from './Pages/Login'
-import Search from './Pages/Search'
 import Signup from './Pages/Signup'
 import Profile from './Pages/Profile'
 import Collab from './Pages/Collab'

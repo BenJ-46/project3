@@ -39,15 +39,18 @@ const Search = () => {
       return i.name.toLowerCase().match(input)
     })
   }
-  return (
   
+  return (
+   
     <div className="search-box">
+  <form>
       <input className="search-txt"
         type="text"
         placeholder="Search"
         onChange={handleChange}
         value={input} />
-        <a className="search-btn" href="#"><FaSearch/></a>
+        <button className="search-btn" onClick={}><FaSearch/></button>
+  </form>      
       {languages.map((language, index) => {
 
         return (
@@ -57,7 +60,7 @@ const Search = () => {
 
             <div key={index}>
          
-        
+             
                 <ul>{language.name}</ul>
               
             </div>
