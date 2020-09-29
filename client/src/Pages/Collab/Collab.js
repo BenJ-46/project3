@@ -28,6 +28,7 @@ const Collab = () => {
     API.getSavedUser()
     .then(({ data }) => {
       const users = data.filter(x => x.lang === collabState.filter)
+      setCollabState({...collabState, users})
     })
   }
 
