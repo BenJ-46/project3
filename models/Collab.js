@@ -21,7 +21,7 @@ const Collab = new Schema({
         type: String,
         required: true
     },
-    lang: {
+    language: {
         type: String,
         required: true,
         message: 'Please list languages'

@@ -2,8 +2,8 @@ const { model, Schema } = require('mongoose')
 
 const Lang = new Schema({
     
-    lang: {
-        type: Array,
+    language: {
+        type: String,
         required: true,
     }
 
