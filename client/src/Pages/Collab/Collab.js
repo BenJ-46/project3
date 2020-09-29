@@ -51,6 +51,8 @@ import Search from '../Search/Search.js'
    >
 
  <Carousel arrows infinite>
+
+    
    <Card>
      <img style={{ height: "400px", paddingtop:"5em", padding:"1em", margin:"auto"}}
        src="https:images.unsplash.com/photo-1592158169526-9deda479afce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=783&q=80"
@@ -66,7 +68,7 @@ import Search from '../Search/Search.js'
 
        
    </Card>
-       <Card>
+       {/* <Card>
          <img style={{ height: "400px", paddingtop: "5em", padding: "1em", margin: "auto" }}
            src="https:images.unsplash.com/photo-1592158169526-9deda479afce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=783&q=80"
            alt="avatar"
@@ -125,7 +127,7 @@ import Search from '../Search/Search.js'
          <Button color="warning" size="lg" block>Maybe Next time!</Button>
 
 
-       </Card>
+       </Card> */}
 
    
  </Carousel>
