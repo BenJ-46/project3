@@ -19,7 +19,7 @@ const Signup = () => {
     username: '',
     password:'',
     bio:'',
-    language:[],
+    language: [],
     devHistory:'',
     user: []
   })
@@ -46,7 +46,7 @@ const Signup = () => {
       email: userState.email,
       password: userState.password,
       bio: userState.bio,
-      lang: userState.language,
+      lang: userState.lang,
       devHist: userState.devHistory
     })
     .then( data => {
