@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch, Route, Link } from 'react-router-dom'
+// import { Switch, Route, Link } from 'react-router-dom'
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Button, Form, FormText, Container, Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
 import { FacebookLoginButton } from 'react-social-login-buttons';
@@ -109,16 +109,6 @@ const Signup = () => {
           name="language"
           onChange={userState.handleInputChange}
           placeholder="Enter known Languages" />
-          {/* <Input 
-          type="text" 
-          name="language"
-          onChange={userState.handleInputChange}
-          placeholder="Enter known Languages" />
-          <Input 
-          type="text" 
-          name="language"
-          onChange={userState.handleInputChange}
-          placeholder="Enter known Languages" /> */}
         </FormGroup>
         <FormGroup className="center">
           <label >Dev History</label>

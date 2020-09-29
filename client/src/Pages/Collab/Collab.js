@@ -1,15 +1,9 @@
 import "@brainhubeu/react-carousel/lib/style.css";
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import { Card, Button, InputGroup, Input, InputGroupAddon, Form, CardSubtitle } from "reactstrap"
+import { Card, Button, InputGroup, Input, InputGroupAddon, Form } from "reactstrap"
 import './Collab.css'
 import React, { useState, useEffect } from 'react'
 import API from '../../utils/API'
-import axios from 'axios'
-import Image1 from "../../components/Assets/Images/nic4.png";
-import Image2 from "../../components/Assets/Images/bencrop.png";
-import Image3 from "../../components/Assets/Images/kalyncrop.png";
-
-
 
 const Collab = () => {
 
@@ -28,7 +22,7 @@ const Collab = () => {
     API.getSavedUser()
     .then(({ data }) => {
       const users = data.filter(x => x.language === collabState.filter)
-      console.log(users)
+      // console.log(users)
       // console.log(data)
       // console.log(collabState.filter)
       setCollabState({...collabState, user: users})
@@ -86,8 +80,6 @@ const Collab = () => {
           }
         </Carousel>
       </div>
-
-
     </>
   )
 }
