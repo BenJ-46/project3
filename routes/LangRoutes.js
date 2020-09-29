@@ -1,5 +1,11 @@
-// const router = require('express').Router()
-// const { Lang } = require('../models')
+const router = require('express').Router()
+const { Lang } = require('../models')
+
+router.get('/users/:lang', (req, res) => {
+    User.find({lang: req.params.lang})
+      .then(user => res.json(user))
+      .catch(err => console.error(err))
+  })
 
 // // Get All Collabs
 // router.get('/collabs/', (req, res) => {
@@ -22,4 +28,4 @@
 //     .catch(err => console.error(err))
 // })
 
-// module.exports = router
+module.exports = router
