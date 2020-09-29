@@ -4,7 +4,7 @@ const { Lang } = require('../models')
 
 // Get All langs
 router.get('/lang', (req, res) => {
-  Lang.find(req.params.lang)
+  Lang.find()
     .then(lang => res.json(lang))
     .catch(err => console.error(err))
 })
