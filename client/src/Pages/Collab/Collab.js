@@ -8,7 +8,7 @@ import axios from 'axios'
 import Image1 from "../../components/Assets/Images/nic4.png";
 import Image2 from "../../components/Assets/Images/bencrop.png";
 import Image3 from "../../components/Assets/Images/kalyncrop.png";
-import { STATES } from "mongoose";
+
 
 
 const Collab = () => {
@@ -16,7 +16,7 @@ const Collab = () => {
   const [collabState, setCollabState] = useState({
     user: [],
     language: '',
-    langs: [],
+    languages: [],
     filter: ''
   })
 
@@ -24,33 +24,25 @@ const Collab = () => {
     setCollabState({ ...collabState, [event.target.name]: event.target.value })
   }
 
-  collabState.handleFilter = user => {
+  collabState.handleFilter = () => {
     API.getSavedUser()
     .then(({ data }) => {
-      const users = data.filter(x => x.lang === collabState.filter)
-      setCollabState({...collabState, users})
+      const users = data.filter(x => x.language === collabState.filter)
+      console.log(users)
+      // console.log(data)
+      // console.log(collabState.filter)
+      setCollabState({...collabState, user: users})
     })
   }
-
-  // collabState.handleSearchLangs = event => {
-  //   event.preventDefault()
-  //   API.getLang()
-  //     .then(({ data }) => {
-
-  //       // console.log(data)
-  //       setCollabState({ ...collabState, langs: data, search: '' })
-  //     })
-  //     .catch(err => console.error(err))
-  // }
 
   useEffect(() => {
     API.getSavedUser()
       .then(({ data }) => {
-        setCollabState({ ...collabState, user: data })
+        const users = data.filter(x => x.name !== localStorage.getItem('user'))
+        setCollabState({ ...collabState, user: users  })
         // console.log(collabState.user)
       })
   }, [])
-
 
   return (
     <>
@@ -60,7 +52,9 @@ const Collab = () => {
             <InputGroupAddon addonType="prepend">
               <Button onClick={collabState.handleFilter}>Search</Button>
             </InputGroupAddon>
-            <Input />
+            <Input 
+            name="filter"
+            onChange={collabState.handleInputChange}/>
           </InputGroup>
           <br />
         </div>
@@ -75,12 +69,12 @@ const Collab = () => {
               collabState.user.map(user => (
                 <Card>
                   <img style={{ height: "400px", paddingtop: "5em", padding: "1em", margin: "auto" }}
-                    src={user.img}
+                    src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                     alt="avatar"
                     className="avatar-img" />
 
                   <h1>{user.name}</h1>
-                  <h2><b><span>{user.lang}</span></b></h2>
+                  <h2><b><span>{user.language}</span></b></h2>
                   <h3>{user.username}</h3>
 
                   <h3>{user.bio}</h3>
