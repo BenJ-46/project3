@@ -13,16 +13,6 @@ import { STATES } from "mongoose";
 
 const Collab = () => {
 
-<<<<<<< HEAD
-   useEffect(() => {
-     API.getSavedUser()
-       .then(({ data }) => {
-         setCollabState({ ...collabState, user: data })
-         console.log(collabState.user)
-       })
-   }, [])
-   
-=======
   const [collabState, setCollabState] = useState({
     user: [],
     language: '',
@@ -33,7 +23,6 @@ const Collab = () => {
   collabState.handleInputChange = event => {
     setCollabState({ ...collabState, [event.target.name]: event.target.value })
   }
->>>>>>> 4d99eb83e1cd709f09e32238eebfbbf8cf404a7e
 
   collabState.handleFilter = user => {
     API.getSavedUser()
