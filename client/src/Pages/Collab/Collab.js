@@ -51,6 +51,7 @@ import Search from '../Search/Search.js'
     <h1>{user.name}</h1>
       <h2><b><span>{user.lang}</span></b></h2>
     <h3>{user.username}</h3>
+    
     <h3>{user.bio}</h3>
          <Button color="warning" size="lg" block>Let's Collab</Button>
          <Button color="warning" size="lg" block>Maybe Next time!</Button>

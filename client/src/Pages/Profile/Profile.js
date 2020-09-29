@@ -46,8 +46,7 @@ const Profile = () => {
                     <h4>CodeIn Email Address</h4>
                     <h4>{user.email}</h4>
 
-                    <h2>{user.language1} | </h2> 
-                    {/* {user.language2} | {user.language3} */}
+                    <h2>{user.lang[0]} || {user.lang} </h2> 
 
                     {/* <p>HTML/CSS | JavaScript | React | NodeJS | Jquery | C# | Express | MongoDB</p> */}
 

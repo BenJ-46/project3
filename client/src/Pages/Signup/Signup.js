@@ -19,9 +19,7 @@ const Signup = () => {
     username: '',
     password:'',
     bio:'',
-    language1:[],
-    language2: [],
-    language3: [],
+    language: [],
     devHistory:'',
     user: []
   })
@@ -48,9 +46,7 @@ const Signup = () => {
       email: userState.email,
       password: userState.password,
       bio: userState.bio,
-      language1: userState.language1,
-      language2: userState.language2,
-      language3: userState.language3,
+      lang: userState.lang,
       devHist: userState.devHistory
     })
     .then( data => {
@@ -110,17 +106,17 @@ const Signup = () => {
           <label >Known Languages</label>
           <Input 
           type="text" 
-          name="language1"
+          name="language"
           onChange={userState.handleInputChange}
           placeholder="Enter known Languages" />
           <Input 
           type="text" 
-          name="language2"
+          name="language"
           onChange={userState.handleInputChange}
           placeholder="Enter known Languages" />
           <Input 
           type="text" 
-          name="language3"
+          name="language"
           onChange={userState.handleInputChange}
           placeholder="Enter known Languages" />
         </FormGroup>

@@ -4,13 +4,12 @@ const API = {
 
 getSavedUser: () => axios.get('/api/users'),
 getUser: name => axios.get(`/api/users/${name}`),
-saveUser: user => axios.post('/api/users', user)
+saveUser: user => axios.post('/api/users', user),
+getLang: () => axios.get('/api/langs')
 
 }
 
 export default API
-
-
 
  // savedState.handleInfoSaved = id => {
   //   API.getUser(id)
