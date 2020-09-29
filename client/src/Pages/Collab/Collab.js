@@ -15,7 +15,6 @@ import Search from '../Search/Search.js'
     user: []
    })
 
-
    useEffect(() => {
      API.getSavedUser()
        .then(({ data }) => {
