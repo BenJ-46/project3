@@ -38,9 +38,9 @@ const Login = (props) => {
               <FacebookLoginButton href="http://facecbook.com"className="mt-3 mb-3" />
               <GithubLoginButton href="http://github.com" className="mt-3 mb-3" />
       <div className="text-center">
-        <a href="/Signup">Sign up</a>
+        <a className="a text" href="/Signup">Sign up</a>
         <span className="p-2">|</span>
-        <a href="/sign-up">Forgot Password</a>
+        <a className="a text"href="/sign-up">Forgot Password</a>
       </div>
     </Form>
       </Container>
