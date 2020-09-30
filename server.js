@@ -30,7 +30,7 @@ passport.deserializeUser(User.deserializeUser)
 passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
   secretOrKey: process.env.SECRET
-}, ({id }, cb) => User.findById(id)
+}, ({ id }, cb) => User.findById(id)
 // .populate('data')
 .then(user => cb(null, user))
 .catch(err => cb(err))
