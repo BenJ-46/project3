@@ -73,21 +73,6 @@ const handleCollabAdd = (e) => {
           {
             collabState.user.length > 0 ? (
               collabState.user.map(user => (
-<<<<<<< HEAD
-                <Card>
-                  <img style={{ height: "400px", paddingtop: "5em", padding: "1em", margin: "auto" }}
-                    src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                    alt="avatar"
-                    className="avatar-img" />
-
-                  <h1>{user.name}</h1>
-                  <h2><b><span>{user.language}</span></b></h2>
-                  <h3>{user.username}</h3>
-
-                  <h3>{user.bio}</h3>
-                  <Button color="warning" size="lg" block data-user={user.name} onClick={handleCollabAdd}>Let's Collab</Button>
-                  <Button color="warning" size="lg" block>Maybe Next time!</Button>
-=======
                 <Card  className="card">
                   <Container>
                     <Row>
@@ -110,7 +95,6 @@ const handleCollabAdd = (e) => {
                     </Row>
                     
                   </Container>
->>>>>>> 49e68c27a1cbafbc3a9b8ffc8caf9039e07200cb
                 </Card>
                  
               ))
@@ -118,13 +102,10 @@ const handleCollabAdd = (e) => {
           }
         </Carousel>
       </div>
-<<<<<<< HEAD
-=======
           </Container>
         </Cell>
       </Grid>    
 
->>>>>>> 49e68c27a1cbafbc3a9b8ffc8caf9039e07200cb
     </>
   )
 }
