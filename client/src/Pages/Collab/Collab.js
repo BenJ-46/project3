@@ -3,6 +3,7 @@ import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import { Card, Button, InputGroup, Input, InputGroupAddon, Form } from "reactstrap"
 import './Collab.css'
 import React, { useState, useEffect } from 'react'
+import { Alert } from 'reactstrap'
 import API from '../../utils/API'
 
 const Collab = () => {
@@ -72,7 +73,12 @@ const Collab = () => {
                   <h3>{user.username}</h3>
 
                   <h3>{user.bio}</h3>
-                  <Button color="warning" size="lg" block>Let's Collab</Button>
+
+                  
+                  {/* <Alert color="primary">
+                  This is a primary alert — check it out!
+                  </Alert> */}
+                  <Button href="/Friends" color="warning" size="lg" block>Let's Collab</Button>                  
                   <Button color="warning" size="lg" block>Maybe Next time!</Button>
                 </Card>
               ))
