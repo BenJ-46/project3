@@ -52,12 +52,16 @@
     position: fixed;
 }
 
-.collabBtn{
+.collabBtn {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+
+.content-wrap {
+    background: rgb(237, 238, 188);
 }
 
 /* .search-box {
