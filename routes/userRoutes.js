@@ -11,6 +11,7 @@ router.post('/users/register', (req, res) => {
     res.sendStatus(200)
   })
 })
+
 // User Login Route w/ Authorization
 router.post('/users/login', (req, res) => {
   const { username, password } = req.body
@@ -19,6 +20,7 @@ router.post('/users/login', (req, res) => {
     res.json(user ? jwt.sign({ id: user._id }, process.env.SECRET) : null)
   })
 })
+
 // this gives the jsonWebToken
 router.get('/users/posts', passport.authenticate('jwt'), (req, res) => {
   res.sendStatus(200)
