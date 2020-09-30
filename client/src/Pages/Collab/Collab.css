@@ -60,6 +60,9 @@
     -o-border-radius: 50%;
 }
 
+.margin {
+    margin-top: 20px ;
+}
 .content-wrap {
     background: rgb(237, 238, 188);
 }
