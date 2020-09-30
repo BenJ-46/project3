@@ -2,7 +2,7 @@ import React from 'react';
 import {Switch, Route, Link } from 'react-router-dom'
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Button, Form, Container, Row, Col, Card, FormGroup, label, Input} from 'reactstrap';
-import { Grid, Cell } from 'react-mdl'
+import { Grid, Cell } from 'react-mdl';
 import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
 import { GithubLoginButton } from 'react-social-login-buttons';
