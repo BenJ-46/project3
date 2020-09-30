@@ -4,7 +4,7 @@ const API = {
 
 getSavedUser: () => axios.get('/api/users'),
 getUser: name => axios.get(`/api/users/${name}`),
-saveUser: user => axios.post('/api/users', user),
+saveUser: user => axios.post('/api/users/register', user),
 getLang: () => axios.get('/api/lang')
 
 }

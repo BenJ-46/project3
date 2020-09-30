@@ -25,7 +25,7 @@ app.use(passport.session())
 passport.use(new Strategy(User.authenticate()))
 // Serialize && Deserialize 1 USER
 passport.serializeUser(User.serializeUser())
-passport.deserializeUser(User.deserializeUser)
+passport.deserializeUser(User.deserializeUser())
 
 passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),

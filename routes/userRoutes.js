@@ -14,8 +14,8 @@ router.post('/users/register', (req, res) => {
 
 // User Login Route w/ Authorization
 router.post('/users/login', (req, res) => {
-  const { username, password } = req.body
-  User.authenticate()(username, password, (err, user) => {
+  const { email, password } = req.body
+  User.authenticate()(email, password, (err, user) => {
     if (err) { console.log(err) }
     res.json(user ? jwt.sign({ id: user._id }, process.env.SECRET) : null)
   })
@@ -27,7 +27,7 @@ router.get('/users/posts', passport.authenticate('jwt'), (req, res) => {
   res.json(req.user)
 })
 
-// CodeIn ROUTES
+// CodeIn ROUTES //
 // GET User
 router.get('/users', (req, res) => {
   User.find()
@@ -41,11 +41,12 @@ router.get('/users/:name', (req, res) => {
     .catch(err => console.error(err))
 })
 // POST one User
-router.post('/users', (req, res) => {
-  User.create(req.body)
-    .then(user => res.json(user))
-    .catch(err => console.error(err))
-})
+// router.post('/users', (req, res) => {
+//   User.create(req.body)
+//     .then(user => res.json(user))
+//     .catch(err => console.error(err))
+// })
+
 // POST one User/:name & relation it w/ collabList
 router.post('/users/:name', (req, res) => {
   // User.collabList.push(1)
