@@ -11,6 +11,7 @@ import { Grid, Cell } from 'react-mdl';
 const Team = () => {
   return (
     <>
+    <div classname= "body">
       <Grid className="layout">
         <Cell col={12}>
           <Container >
@@ -52,7 +53,7 @@ const Team = () => {
           </Container>
         </Cell>
       </Grid>
-
+      </div>
     </>
   )
 }

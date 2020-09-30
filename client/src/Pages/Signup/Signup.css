@@ -5,9 +5,12 @@
  .text {
    color: white;
    font-size: 5mm;
-   
  }
 
- .layout{
+ .layout {
+   background: rgb(237, 238, 188);
+ }
+
+ .content-wrap {
    background: rgb(237, 238, 188);
  }
