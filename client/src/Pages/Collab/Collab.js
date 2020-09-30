@@ -43,7 +43,11 @@ const Collab = () => {
         // console.log(collabState.user)
       })
   }, [])
-
+const handleCollabAdd = (e) => {
+  console.log(e.target.dataset.user)
+  const currentUser = localStorage.getItem('user')
+  axios.post(`/api/users/${currentUser}`,{name: e.target.dataset.user})
+}
   return (
     <>
       <Form>
@@ -78,7 +82,7 @@ const Collab = () => {
                   <h3>{user.username}</h3>
 
                   <h3>{user.bio}</h3>
-                  <Button color="warning" size="lg" block>Let's Collab</Button>
+                  <Button color="warning" size="lg" block data-user={user.name} onClick={handleCollabAdd}>Let's Collab</Button>
                   <Button color="warning" size="lg" block>Maybe Next time!</Button>
                 </Card>
               ))
