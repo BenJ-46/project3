@@ -4,6 +4,8 @@
     left: 0;
     width: 100%;
     height: 100%;
+   background: rgb(237, 238, 188);
+    ;
 }
 
 .avatar-img {
@@ -11,7 +13,6 @@
     padding-top: 5em;
     padding-bottom: 1em;
     border-radius: 50px;
-   
 }
 
 .banner-text {
