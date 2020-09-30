@@ -11,12 +11,12 @@
   
 }
 
-.a:hover {
-  color: white
+.b:hover {
+  color: black
 }
 
-.text {
-  color: white;
+.textb {
+  color: black;
   font-size: 5mm;
 }
 
