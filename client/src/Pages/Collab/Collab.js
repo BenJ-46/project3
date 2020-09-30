@@ -42,7 +42,11 @@ const Collab = () => {
         // console.log(collabState.user)
       })
   }, [])
-
+const handleCollabAdd = (e) => {
+  console.log(e.target.dataset.user)
+  const currentUser = localStorage.getItem('user')
+  axios.post(`/api/users/${currentUser}`,{name: e.target.dataset.user})
+}
   return (
     <>
       <Grid className="layout">

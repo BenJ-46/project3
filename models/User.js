@@ -30,6 +30,7 @@ const User = new Schema({
         required: true,
         // message: 'Please list languages'
     },
+    collabList: { type: Array, "default": [2] }
 
 }, { timestamps: true })
 

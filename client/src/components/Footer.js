@@ -34,12 +34,8 @@ const Footer = () => {
           <div className="col">
             <h4>FAQ'S</h4>
             <ul className="list-unstyled">
-                <li><Button className="bcolor btn:focus"  type="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = 'https://guarded-crag-60613.herokuapp.com/';
-                  }}
-                > Accessibility</Button></li>
+                <li>
+                 Accessibility</li>
               <li>Customer Service</li>
               <li>Privacy Policy</li>
             </ul>
