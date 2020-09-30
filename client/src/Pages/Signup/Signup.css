@@ -1,8 +1,13 @@
  .a:hover {
    color: white
-}
+ }
 
-.text{
-  color:  white;
-  font-size: 5mm;
-  }
+ .text {
+   color: white;
+   font-size: 5mm;
+   
+ }
+
+ .layout{
+   background: rgb(237, 238, 188);
+ }
