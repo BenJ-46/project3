@@ -60,6 +60,10 @@
     -o-border-radius: 50%;
 }
 
+.margin {
+    margin-top: 20px ;
+}
+
 /* .search-box {
   position: absolute;
   top: 50%;

@@ -56,9 +56,9 @@ const handleCollabAdd = (e) => {
         <div>
           <InputGroup>
             <InputGroupAddon addonType="prepend">
-              <Button onClick={collabState.handleFilter}>Search</Button>
+              <Button className="margin"onClick={collabState.handleFilter}>Search</Button>
             </InputGroupAddon>
-            <Input className="input"
+            <Input className="margin input"
             name="filter"
             onChange={collabState.handleInputChange}/>
           </InputGroup>
