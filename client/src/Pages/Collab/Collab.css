@@ -76,6 +76,10 @@
   height: 60px;
   border-radius: 40px;
   padding: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 .search-btn{
