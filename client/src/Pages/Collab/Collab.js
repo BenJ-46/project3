@@ -1,11 +1,14 @@
 import "@brainhubeu/react-carousel/lib/style.css";
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import { Card, Button, InputGroup, Input, InputGroupAddon, Form } from "reactstrap"
+import { Card, Button, InputGroup, Input, InputGroupAddon, Form, CardSubtitle , Container, Row, Col} from "reactstrap";
 import './Collab.css'
-import React, { useState, useEffect } from 'react'
-import { Alert } from 'reactstrap'
-import API from '../../utils/API'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react';
+import { Grid, Cell } from 'react-mdl';
+import API from '../../utils/API';
+import axios from 'axios';
+
+
+
 
 const Collab = () => {
 
@@ -46,13 +49,16 @@ const handleCollabAdd = (e) => {
 }
   return (
     <>
+      <Grid className="layout">
+        <Cell col={12}>
+          <Container >
       <Form>
         <div>
           <InputGroup>
             <InputGroupAddon addonType="prepend">
               <Button onClick={collabState.handleFilter}>Search</Button>
             </InputGroupAddon>
-            <Input 
+            <Input className="input"
             name="filter"
             onChange={collabState.handleInputChange}/>
           </InputGroup>
@@ -61,12 +67,13 @@ const handleCollabAdd = (e) => {
       </Form>
       <div
         className="App"
-        style={{ width: "1000px", margin: "auto", padding: "50px" }}
+        style={{ width: "1000px", margin: "auto", padding: "10px" }}
       >
-        <Carousel arrows infinite>
+        <Carousel className="arrows" arrows infinite>
           {
             collabState.user.length > 0 ? (
               collabState.user.map(user => (
+<<<<<<< HEAD
                 <Card>
                   <img style={{ height: "400px", paddingtop: "5em", padding: "1em", margin: "auto" }}
                     src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
@@ -80,12 +87,44 @@ const handleCollabAdd = (e) => {
                   <h3>{user.bio}</h3>
                   <Button color="warning" size="lg" block data-user={user.name} onClick={handleCollabAdd}>Let's Collab</Button>
                   <Button color="warning" size="lg" block>Maybe Next time!</Button>
+=======
+                <Card  className="card">
+                  <Container>
+                    <Row>
+                      <Col div lg="7">
+                      <img className="avatar-img" style={{ height: "300px", paddingtop: "5em", padding: "1em", margin: "auto" }}
+                        src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        alt="avatar" />
+
+                      <h1 className="name">{user.name}</h1>
+                      <h2 className="lang"><b><span>{user.language}</span></b></h2>
+                      <h3 className="userName">{user.username}</h3>
+                      </Col>
+                      
+                      <Col div lg="5">
+                      <h3 className="bio">{user.bio}</h3>
+                      <Button className="collabBtn" color="warning" size="lg" block>Let's Collab</Button>
+                      <Button color="warning" size="lg" block>Maybe Next time!</Button>
+                      </Col>
+
+                    </Row>
+                    
+                  </Container>
+>>>>>>> 49e68c27a1cbafbc3a9b8ffc8caf9039e07200cb
                 </Card>
+                 
               ))
             ) : null
           }
         </Carousel>
       </div>
+<<<<<<< HEAD
+=======
+          </Container>
+        </Cell>
+      </Grid>    
+
+>>>>>>> 49e68c27a1cbafbc3a9b8ffc8caf9039e07200cb
     </>
   )
 }

@@ -1,6 +1,69 @@
-.editBtn {
-    margin-top: 75px;
+.arrows {
+    background: #22c1c3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #22c1c3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.card {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-style: dotted;
+}
+
+.name {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    background: #22c1c3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #22c1c3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.lang {
+    text-align: center;
+}
+
+.userName {
+    text-align: center;
+}
+
+.bio {
+    text-align: center;
+}
+
+.avatar-img {
+    height: 100px;
+    padding-top: 5em;
+    padding-bottom: 1em;
+    border-radius: 0%;
+}
+
+.body {
+    background-color: black;
+}
+
+.input {
+    position: fixed;
+}
+
+.collabBtn {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.content-wrap {
+    background: rgb(237, 238, 188);
+}
+
 /* .search-box {
   position: absolute;
   top: 50%;
