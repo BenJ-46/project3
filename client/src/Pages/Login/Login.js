@@ -25,7 +25,12 @@ const Login = (props) => {
 
   // loginState.handleUserLogin = userID => {
   //   const user = loginState.user.filter(x => x.userID === userID)
-  //   API.
+  //   API.getLoginInfo(user)
+  //   .then( data => {
+
+  //     localStorage.setItem('user')
+  //     window.location = '/Profile'
+  //   })
   // }
 
   return (
@@ -55,7 +60,7 @@ const Login = (props) => {
         placeholder="Password" />
       </FormGroup>
       <Button 
-      // onClick={loginState.handle}
+      // onClick={loginState.handleUserLogin}
       className="btn-lg btn-dark btn-block a text" 
       href="/Profile">Log in</Button>
       <div className="text-center pt-3">Or Log in via your social accounts</div>
