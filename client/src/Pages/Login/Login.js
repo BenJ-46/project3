@@ -13,25 +13,25 @@ import API from '../../utils/API';
 
 const Login = (props) => {
 
-  const [loginState, setLoginState] = useState({
-    email: '',
-    password: '',
-    user: []
-  })
+  // const [loginState, setLoginState] = useState({
+  //   email: '',
+  //   password: '',
+  //   user: []
+  // })
 
-  loginState.handleInputChange = event => {
-    setLoginState({ ...loginState, [event.target.name]: event.target.value })
-  }
+  // loginState.handleInputChange = event => {
+  //   setLoginState({ ...loginState, [event.target.name]: event.target.value })
+  // }
 
-  loginState.handleUserLogin = userID => {
-    const user = loginState.user.map(x => x.userID === userID)
-    API.saveUser(user)
-    .then( data => {
+  // loginState.handleUserLogin = userID => {
+  //   const user = loginState.user.filter(x => x.userID === userID)
+  //   API.getLoginInfo(user)
+  //   .then( data => {
 
-      localStorage.getItem('user', loginState.email, loginState.password)
-      window.location = '/Profile'
-    })
-  }
+  //     localStorage.setItem('user')
+  //     window.location = '/Profile'
+  //   })
+  // }
 
   return (
 
@@ -48,7 +48,7 @@ const Login = (props) => {
         <Input 
         type="email" 
         name="email"
-        onChange={loginState.handleInputChange}
+        // onChange={loginState.handleInputChange}
         placeholder="Email" />
       </FormGroup>
       <FormGroup className="center">
@@ -56,11 +56,11 @@ const Login = (props) => {
         <Input 
         type="password" 
         name="password"
-        onChange={loginState.handleInputChange}
+        // onChange={loginState.handleInputChange}
         placeholder="Password" />
       </FormGroup>
       <Button 
-      onClick={loginState.handle}
+      // onClick={loginState.handleUserLogin}
       className="btn-lg btn-dark btn-block a text" 
       href="/Profile">Log in</Button>
       <div className="text-center pt-3">Or Log in via your social accounts</div>
