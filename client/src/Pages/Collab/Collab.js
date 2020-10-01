@@ -86,7 +86,7 @@ const handleCollabAdd = (e) => {
                 
                       </Col>
                       <Col div lg="6" style= {{position: "relative"}}>
-                        <h3 className="userName">{user.username}</h3>
+                        <h3 style={{ position: "absolute", bottom: "7rem" }} className="userName">{user.username}</h3>
                         <h2 className="lang">I specialize in {user.language}</h2>
                        
 
