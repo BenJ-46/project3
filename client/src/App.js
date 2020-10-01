@@ -5,6 +5,7 @@ import Signup from './Pages/Signup'
 import Profile from './Pages/Profile'
 import Collab from './Pages/Collab'
 import Team from './Pages/Team'
+import Friends from './Pages/Friends'
 import Footer from './components/Footer'
 import './App.css'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
@@ -42,6 +43,9 @@ const App = () => {
                   <NavItem>
                     <NavLink href="/Collab/">Collab</NavLink>
                   </NavItem>
+                    <NavItem>
+                      <NavLink href="/Friends">Friends</NavLink>
+                    </NavItem>
                   <NavItem>
                     <NavLink href="/Team">Team</NavLink>
                   </NavItem>
@@ -55,6 +59,7 @@ const App = () => {
               {/* <Route exact path="/Search" component={Search} /> */}
               <Route path="/Profile" component={Profile} />
             <Route path="/Collab" component={Collab} />
+              <Route path="/Friends" component={Friends} />
             <Route path="/Team" component={Team} />
               <Route path="/Signup" component={Signup} />
              </Switch>

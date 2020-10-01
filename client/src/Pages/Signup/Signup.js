@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Switch, Route, Link } from 'react-router-dom'
+// import { Switch, Route, Link } from 'react-router-dom'
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Button, Form, FormText, Container, Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
+import { Grid, Cell } from 'react-mdl'
 import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
 import './Signup.css';
@@ -40,7 +41,7 @@ const Signup = () => {
 
   userState.handleRegisterChange = event => {
     event.preventDefault()
-    axios.post('/api/users', {
+    axios.post('/api/users/register', {
       name: userState.name,
       username: userState.username,
       email: userState.email,
@@ -59,6 +60,10 @@ const Signup = () => {
  
   return (
     <>
+
+      <Grid className="layout">
+        <Cell col={12}>
+          <Container >
       <Form className="login-form">
         <h2 className="center"><span className="font-weight-bold">Sign up</span></h2>
         <h5 className="center">Welcome to codeIn | Join us!</h5>
@@ -109,16 +114,6 @@ const Signup = () => {
           name="language"
           onChange={userState.handleInputChange}
           placeholder="Enter known Languages" />
-          {/* <Input 
-          type="text" 
-          name="language"
-          onChange={userState.handleInputChange}
-          placeholder="Enter known Languages" />
-          <Input 
-          type="text" 
-          name="language"
-          onChange={userState.handleInputChange}
-          placeholder="Enter known Languages" /> */}
         </FormGroup>
         <FormGroup className="center">
           <label >Dev History</label>
@@ -134,6 +129,9 @@ const Signup = () => {
         <a className="text a"href="/Profile">Sign up!</a>
         </Button>
         </Form>
+          </Container>
+        </Cell>
+      </Grid>
 
 
     </>
