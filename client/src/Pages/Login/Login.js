@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Switch, Route, Link } from 'react-router-dom'
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Button, Form, Container, Row, Col, Card, FormGroup, label, Input} from 'reactstrap';
@@ -9,11 +9,24 @@ import { GithubLoginButton } from 'react-social-login-buttons';
 import './Login.css'
 import { Router } from 'react-router-dom';
 import Footer from '../../components/Footer'
+import API from '../../utils/API';
 
 const Login = (props) => {
 
-  
+  // const [loginState, setLoginState] = useState({
+  //   email: '',
+  //   password: '',
+  //   user: []
+  // })
 
+  // loginState.handleInputChange = event => {
+  //   setLoginState({ ...loginState, [event.target.name]: event.target.value })
+  // }
+
+  // loginState.handleUserLogin = userID => {
+  //   const user = loginState.user.filter(x => x.userID === userID)
+  //   API.
+  // }
 
   return (
 
@@ -27,13 +40,24 @@ const Login = (props) => {
       <h5 className="center">Welcome back to codeIn</h5>
       <FormGroup className="center">
         <label >Email</label>
-        <Input type="email" placeholder="Email" />
+        <Input 
+        type="email" 
+        name="email"
+        // onChange={loginState.handleInputChange}
+        placeholder="Email" />
       </FormGroup>
       <FormGroup className="center">
         <label >Password</label>
-        <Input type="password" placeholder="Password" />
+        <Input 
+        type="password" 
+        name="password"
+        // onChange={loginState.handleInputChange}
+        placeholder="Password" />
       </FormGroup>
-      <Button className="btn-lg btn-dark btn-block a text" href="/Profile">Log in</Button>
+      <Button 
+      // onClick={loginState.handle}
+      className="btn-lg btn-dark btn-block a text" 
+      href="/Profile">Log in</Button>
       <div className="text-center pt-3">Or Log in via your social accounts</div>
               <FacebookLoginButton href="http://facecbook.com"className="mt-3 mb-3" />
               <GithubLoginButton href="http://github.com" className="mt-3 mb-3" />

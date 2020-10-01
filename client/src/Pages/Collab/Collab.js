@@ -42,9 +42,10 @@ const Collab = () => {
         // console.log(collabState.user)
       })
   }, [])
-const handleCollabAdd = (e) => {
+const handleCollabAdd = (e, data) => {
   console.log(e.target.dataset.user)
   const currentUser = localStorage.getItem('user')
+  const users = data.filter(x => x.name !== localStorage.getItem('user'))
   axios.post(`/api/users/${currentUser}`,{name: e.target.dataset.user})
 }
   return (

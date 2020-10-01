@@ -41,7 +41,7 @@ const Signup = () => {
 
   userState.handleRegisterChange = event => {
     event.preventDefault()
-    axios.post('/api/users', {
+    axios.post('/api/users/register', {
       name: userState.name,
       username: userState.username,
       email: userState.email,
