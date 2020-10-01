@@ -17,3 +17,9 @@
   background: linear-gradient(to right, #fdbb2d, #22c1c3);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.sizing{
+  height: 75px;
+  width: 75px;
+  margin-right: 15px;
+ }
