@@ -6,7 +6,8 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import API from '../../utils/API';
 import axios from 'axios';
-import { FaSearch } from 'react-icons/fa';
+
+
 
 
 const Collab = () => {
@@ -41,10 +42,10 @@ const Collab = () => {
         // console.log(collabState.user)
       })
   }, [])
-const handleCollabAdd = (e, data) => {
+const handleCollabAdd = (e) => {
   console.log(e.target.dataset.user)
+  // const users = data.filter(x => x.name !== localStorage.getItem('user'))
   const currentUser = localStorage.getItem('user')
-  const users = data.filter(x => x.name !== localStorage.getItem('user'))
   axios.post(`/api/users/${currentUser}`,{name: e.target.dataset.user})
 }
   return (
