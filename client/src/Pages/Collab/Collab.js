@@ -76,19 +76,26 @@ const handleCollabAdd = (e) => {
                 <Card className="card">
                   <Container>
                     <Row>
-                      <Col div lg="7">  
-                        <img className="avatar-img" style={{ height: "300px", paddingtop: "5em", padding: "1em", margin: "auto" }}
+                      <Col div lg="6">  
+                        <img className="avatar-img img-fluid" 
                     src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                     alt="avatar" />
 
-                  <h1>{user.name}</h1>
-                  <h2><b><span>{user.language}</span></b></h2>
-                  <h3>{user.username}</h3>
-
-                  <h3>{user.bio}</h3>
-                  <Button color="warning" size="lg" block data-user={user.name} onClick={handleCollabAdd}>Let's Collab</Button>
-                  <Button color="warning" size="lg" block>Maybe Next time!</Button>
+                  <h1 className="name"> {user.name}</h1>
+                  
                 
+                      </Col>
+                      <Col div lg="6" style= {{position: "relative"}}>
+                        <h3 className="userName">{user.username}</h3>
+                        <h2 className="lang">I specialize in {user.language}</h2>
+                       
+
+                        <h3 style={{ position: "absolute", bottom: "7rem"}}className="bio">{user.bio}</h3>
+
+                        
+
+                        <Button style={{ position: "absolute", bottom: "4rem", left: "0", marginRight: "0" }} color="warning" size="lg" block data-user={user.name} onClick={handleCollabAdd}>Let's Collab</Button>
+                        <Button style={{ position: "absolute",bottom: ".5rem", left:"0", marginRight:"0"}}color="warning" size="lg" block>Maybe Next time!</Button>
                       </Col>
 
                     </Row>

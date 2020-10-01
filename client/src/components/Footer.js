@@ -17,7 +17,7 @@ const Footer = () => {
             <h4>Contact</h4>
             <ul className="list-unstyled">
                 <li> <AiOutlinePhone/> (619) 555-5555</li>
-                <li> <AiOutlineMail/> codeIn@customerserice.com</li>
+                <li> <AiOutlineMail/> codeIn@customerservice.com</li>
               <li>San Diego,CA</li>
               <li>905 California Street</li>
             </ul>

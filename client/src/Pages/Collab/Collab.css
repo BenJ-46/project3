@@ -12,11 +12,13 @@
     margin-bottom: 75px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-style: dotted;
+    background: rgb(237, 238, 188);
 }
 
 .name {
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
     background: #22c1c3;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
@@ -27,22 +29,34 @@
 
 .lang {
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .userName {
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .bio {
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 .avatar-img {
     height: 100px;
-    padding-top: 5em;
+    padding-top: 1em;
     padding-bottom: 1em;
     border-radius: 0%;
+    margin: "auto";
+    /* padding: 1em; */
 }
+
+/* style= {
+        {
+        height: "100%", width: "100%", paddingtop: "5em", padding: "1em", margin: "auto"
+    }
+} */
 
 .body {
     background-color: black;
@@ -61,8 +75,9 @@
 }
 
 .margin {
-    margin-top: 20px ;
+    margin-top: 20px;
 }
+
 .content-wrap {
     background: rgb(237, 238, 188);
 }
