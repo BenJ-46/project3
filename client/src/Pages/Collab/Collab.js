@@ -54,55 +54,62 @@ const Collab = () => {
       <Grid className="layout">
         <Cell col={12}>
           <Container >
-            <Form>
-              <div className>
-                <InputGroup>
-                  <InputGroupAddon addonType="prepend">
-                    <Button className="margin" onClick={collabState.handleFilter}>Search</Button>
-                  </InputGroupAddon>
-                  <Input className="margin input"
-                    name="filter"
-                    onChange={collabState.handleInputChange} />
-                </InputGroup>
-                <br />
-              </div>
-            </Form>
-            <div
-              className="App"
-              style={{ width: "1000px", margin: "auto", padding: "10px" }}
-            >
-              <Carousel className="arrows" arrows infinite>
-                {
-                  collabState.user.length > 0 ? (
-                    collabState.user.map(user => (
-                      <Card className="card">
-                        <Container>
-                          <Row>
-                            <Col div lg="7">
-                              <img className="avatar-img" style={{ height: "300px", paddingtop: "5em", padding: "1em", margin: "auto" }}
-                                src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                                alt="avatar" />
+      <Form>
+        <div>
+          <InputGroup>
+            <InputGroupAddon addonType="prepend">
+              <Button className="margin"onClick={collabState.handleFilter}>Search</Button>
+            </InputGroupAddon>
+            <Input className="margin input"
+            name="filter"
+            onChange={collabState.handleInputChange}/>
+          </InputGroup>
+          <br />
+        </div>
+      </Form>
+      <div
+        className="App"
+        style={{ width: "1000px", margin: "auto", padding: "10px" }}
+      >
+        <Carousel className="arrows" arrows infinite>
+          {
+            collabState.user.length > 0 ? (
+              collabState.user.map(user => (
+                <Card className="card">
+                  <Container>
+                    <Row>
+                      <Col div lg="6">  
+                        <img className="avatar-img img-fluid" 
+                    src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    alt="avatar" />
 
-                              <h1>{user.name}</h1>
-                              <h2><b><span>{user.language}</span></b></h2>
-                              <h3>{user.username}</h3>
+                  <h1 className="name"> {user.name}</h1>
+                  
+                
+                      </Col>
+                      <Col div lg="6" style= {{position: "relative"}}>
+                        <h3 className="userName">{user.username}</h3>
+                        <h2 className="lang">I specialize in {user.language}</h2>
+                       
 
-                              <h3>{user.bio}</h3>
-                              <Button color="warning" size="lg" block data-user={user.name} onClick={handleCollabAdd}>Let's Collab</Button>
-                              <Button color="warning" size="lg" block>Maybe Next time!</Button>
+                        <h3 style={{ position: "absolute", bottom: "7rem"}}className="bio">{user.bio}</h3>
 
-                            </Col>
+                        
 
-                          </Row>
+                        <Button style={{ position: "absolute", bottom: "4rem", left: "0", marginRight: "0" }} color="warning" size="lg" block data-user={user.name} onClick={handleCollabAdd}>Let's Collab</Button>
+                        <Button style={{ position: "absolute",bottom: ".5rem", left:"0", marginRight:"0"}}color="warning" size="lg" block>Maybe Next time!</Button>
+                      </Col>
 
-                        </Container>
-                      </Card>
-
-                    ))
-                  ) : null
-                }
-              </Carousel>
-            </div>
+                    </Row>
+                    
+                  </Container>
+                </Card>
+                 
+              ))
+            ) : null
+          }
+        </Carousel>
+      </div>
           </Container>
         </Cell>
       </Grid>
