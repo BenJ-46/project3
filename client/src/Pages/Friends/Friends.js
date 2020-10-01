@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, {useEffect, useState } from 'react'
 import './Friends.css'
+import { Card, Button, InputGroup, Input, InputGroupAddon, Form, CardSubtitle, Container, Row, Col } from "reactstrap";
+
 
 
 
@@ -39,8 +41,12 @@ console.log(data[0].collabList)
     {/* // map through this is the jsx return */}
    {collabList.map(friend => {
      console.log(collabList)
-    return  <h1 key={friend}>{friend}</h1>
-    
+       
+    return  (
+      
+
+    <h1 key={friend}>{friend}</h1>)
+     
    })}
 
   </>
