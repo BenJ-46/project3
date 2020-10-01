@@ -8,7 +8,6 @@
   padding: 15px;
   margin: auto;
   height: 100%;
-  
 }
 
 .b:hover {
@@ -22,6 +21,8 @@
 
 .layout {
   background: rgb(237, 238, 188);
+}
 
- 
+.content-wrap {
+  background: rgb(237, 238, 188);
 }
