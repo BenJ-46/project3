@@ -22,8 +22,7 @@ const Signup = () => {
     devHistory:'',
     user: []
   })
-  
-  
+    
   userState.handleInputChange = event => {
     setUserState({ ...userState, [event.target.name]: event.target.value })
   }
@@ -130,8 +129,6 @@ const Signup = () => {
           </Container>
         </Cell>
       </Grid>
-
-
     </>
   )
 }

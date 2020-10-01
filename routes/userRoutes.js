@@ -22,7 +22,7 @@ router.post('/users/login', (req, res) => {
 })
 
 // this gives the jsonWebToken
-router.get('/users/posts', passport.authenticate('jwt'), (req, res) => {
+router.get('/users', passport.authenticate('jwt'), (req, res) => {
   res.sendStatus(200)
   res.json(req.user)
 })

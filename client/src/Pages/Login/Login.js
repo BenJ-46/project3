@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {Switch, Route, Link } from 'react-router-dom'
-// import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Button, Form, Container, Row, Col, Card, FormGroup, label, Input} from 'reactstrap';
 import { Grid, Cell } from 'react-mdl';
 import { FacebookLoginButton } from 'react-social-login-buttons';
@@ -13,25 +12,26 @@ import API from '../../utils/API';
 
 const Login = (props) => {
 
-  // const [loginState, setLoginState] = useState({
-  //   email: '',
-  //   password: '',
-  //   user: []
-  // })
+  const [loginState, setLoginState] = useState({
+    email: [],
+    password: [],
+    user: []
+  })
 
-  // loginState.handleInputChange = event => {
-  //   setLoginState({ ...loginState, [event.target.name]: event.target.value })
-  // }
+  loginState.handleInputChange = event => {
+    setLoginState({ ...loginState, [event.target.name]: event.target.value })
+  }
 
-  // loginState.handleUserLogin = userID => {
-  //   const user = loginState.user.filter(x => x.userID === userID)
-  //   API.getLoginInfo(user)
-  //   .then( data => {
-
-  //     localStorage.setItem('user')
-  //     window.location = '/Profile'
-  //   })
-  // }
+  loginState.handleUserLogin = userID => {
+    const user = loginState.user.filter(x => x.userID === userID)
+    API.getLoginInfo(user)
+    .then( data => {
+      // const localStorage = loginState.user.filter(x => x.userID === userID)
+      localStorage.getItem('email')
+      localStorage.getItem('password')
+      window.location = '/Profile'
+    })
+  }
 
   return (
 
