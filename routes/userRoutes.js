@@ -12,6 +12,11 @@ router.get('/users/:name', (req, res) => {
     .then(user => res.json(user))
     .catch(err => console.error(err))
 })
+// router.get('/users/id/:id', (req, res) => {
+//   User.find({ _id: req.params.id })
+//     .then(user => res.json(user))
+//     .catch(err => console.error(err))
+// })
 
 // router.get('/users/un/:username', (req, res) => {
 //   User.find({ username: req.params.username })

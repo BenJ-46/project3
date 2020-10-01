@@ -6,6 +6,8 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import API from '../../utils/API';
 import axios from 'axios';
+import { FaSearch } from 'react-icons/fa';
+
 
 
 
@@ -53,9 +55,9 @@ const handleCollabAdd = (e) => {
         <Cell col={12}>
           <Container >
       <Form>
-        <div>
+        <div className> 
           <InputGroup>
-            <InputGroupAddon addonType="prepend">
+                  <InputGroupAddon addonType="prepend">
               <Button className="margin"onClick={collabState.handleFilter}>Search</Button>
             </InputGroupAddon>
             <Input className="margin input"
