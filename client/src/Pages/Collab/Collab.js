@@ -25,15 +25,6 @@ const Collab = () => {
 
   collabState.handleFilter = () => {
     API.getSavedUser()
-<<<<<<< HEAD
-    .then(({ data }) => {
-      const users = data.filter(x => x.language === collabState.filter)
-      // console.log(users)
-      // console.log(data)
-      // console.log(collabState.filter)
-      setCollabState({...collabState, user: users})
-    })
-=======
       .then(({ data }) => {
         const users = data.filter(x => x.language === collabState.filter)
         console.log(users)
@@ -41,7 +32,6 @@ const Collab = () => {
         // console.log(collabState.filter)
         setCollabState({ ...collabState, user: users })
       })
->>>>>>> 69dfb4e368178d00bb58b2fee627e39ff356079c
   }
 
   useEffect(() => {
@@ -52,20 +42,11 @@ const Collab = () => {
         // console.log(collabState.user)
       })
   }, [])
-<<<<<<< HEAD
-const handleCollabAdd = (e) => {
-  console.log(e.target.dataset.user)
-  // const users = data.filter(x => x.name !== localStorage.getItem('user'))
-  const currentUser = localStorage.getItem('user')
-  axios.post(`/api/users/${currentUser}`,{name: e.target.dataset.user})
-}
-=======
   const handleCollabAdd = (e) => {
     console.log(e.target.dataset.user)
     const currentUser = localStorage.getItem('user')
     axios.post(`/api/users/${currentUser}`, { name: e.target.dataset.user })
   }
->>>>>>> 69dfb4e368178d00bb58b2fee627e39ff356079c
   return (
     <>
       <Grid className="layout">

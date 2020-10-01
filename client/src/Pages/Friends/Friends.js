@@ -8,12 +8,7 @@ import { InstagramLoginButton } from 'react-social-login-buttons';
 import { GithubLoginButton } from 'react-social-login-buttons';
 
 const Friends = () => {
-<<<<<<< HEAD
-
-  const [ collabList, setCollabList] = useState([])
-=======
   const [collabList, setCollabList] = useState([])
->>>>>>> 69dfb4e368178d00bb58b2fee627e39ff356079c
   // Pull from local storage the current user
   const currentUser = localStorage.getItem('user')
   console.log(currentUser)
