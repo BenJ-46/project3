@@ -6,8 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import API from '../../utils/API';
 import axios from 'axios';
-
-
+import { FaSearch } from 'react-icons/fa';
 
 
 const Collab = () => {
@@ -54,12 +53,12 @@ const handleCollabAdd = (e, data) => {
         <Cell col={12}>
           <Container >
       <Form>
-        <div>
+        <div className> 
           <InputGroup>
-            <InputGroupAddon addonType="prepend">
-              <Button onClick={collabState.handleFilter}>Search</Button>
+                  <InputGroupAddon addonType="prepend">
+              <Button className="margin"onClick={collabState.handleFilter}>Search</Button>
             </InputGroupAddon>
-            <Input className="input"
+            <Input className="margin input"
             name="filter"
             onChange={collabState.handleInputChange}/>
           </InputGroup>
@@ -74,23 +73,22 @@ const handleCollabAdd = (e, data) => {
           {
             collabState.user.length > 0 ? (
               collabState.user.map(user => (
-                <Card  className="card">
+                <Card className="card">
                   <Container>
                     <Row>
-                      <Col div lg="7">
-                      <img className="avatar-img" style={{ height: "300px", paddingtop: "5em", padding: "1em", margin: "auto" }}
-                        src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                        alt="avatar" />
+                      <Col div lg="7">  
+                        <img className="avatar-img" style={{ height: "300px", paddingtop: "5em", padding: "1em", margin: "auto" }}
+                    src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    alt="avatar" />
 
-                      <h1 className="name">{user.name}</h1>
-                      <h2 className="lang"><b><span>{user.language}</span></b></h2>
-                      <h3 className="userName">{user.username}</h3>
-                      </Col>
-                      
-                      <Col div lg="5">
-                      <h3 className="bio">{user.bio}</h3>
-                      <Button className="collabBtn" color="warning" size="lg" block>Let's Collab</Button>
-                      <Button color="warning" size="lg" block>Maybe Next time!</Button>
+                  <h1>{user.name}</h1>
+                  <h2><b><span>{user.language}</span></b></h2>
+                  <h3>{user.username}</h3>
+
+                  <h3>{user.bio}</h3>
+                  <Button color="warning" size="lg" block data-user={user.name} onClick={handleCollabAdd}>Let's Collab</Button>
+                  <Button color="warning" size="lg" block>Maybe Next time!</Button>
+                
                       </Col>
 
                     </Row>

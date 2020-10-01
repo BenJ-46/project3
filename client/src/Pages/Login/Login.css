@@ -8,21 +8,20 @@
   padding: 15px;
   margin: auto;
   height: 100%;
+  
 }
 
-.a:hover {
-  color: white
+.b:hover {
+  color: black
 }
 
-.text {
-  color: white;
+.textb {
+  color: black;
   font-size: 5mm;
 }
 
-/* .layout {
+.layout {
   background: rgb(237, 238, 188);
-} */
 
-.content-wrap {
-  background: rgb(237, 238, 188);
+ 
 }
