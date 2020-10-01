@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { User } = require('../models')
 const passport = require('passport')
 const jwt = require('jsonwebtoken')
-// 
+ 
 // Create One user to Register
 router.post('/users/register', (req, res) => {
   const { name, username, email, bio, devHist, language, password } = req.body
@@ -26,6 +26,7 @@ router.get('/users', passport.authenticate('jwt'), (req, res) => {
   res.sendStatus(200)
   res.json(req.user)
 })
+
 
 // CodeIn ROUTES //
 // GET User

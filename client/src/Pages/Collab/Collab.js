@@ -7,9 +7,6 @@ import { Grid, Cell } from 'react-mdl';
 import API from '../../utils/API';
 import axios from 'axios';
 
-
-
-
 const Collab = () => {
 
   const [collabState, setCollabState] = useState({
@@ -44,10 +41,10 @@ const Collab = () => {
   }, [])
 const handleCollabAdd = (e) => {
   console.log(e.target.dataset.user)
-  // const users = data.filter(x => x.name !== localStorage.getItem('user'))
   const currentUser = localStorage.getItem('user')
-  axios.post(`/api/users/${currentUser}`,{name: e.target.dataset.user})
+  axios.post(`/api/users/${currentUser}`, {name: e.target.dataset.user})
 }
+
   return (
     <>
       <Grid className="layout">
@@ -110,7 +107,7 @@ const handleCollabAdd = (e) => {
   )
 }
 
-export default Collab;
+export default Collab
 
 
 
