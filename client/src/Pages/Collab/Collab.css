@@ -33,16 +33,6 @@
 }
 
 .userName {
-<<<<<<< HEAD
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.bio {
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
-=======
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: teal;
@@ -62,7 +52,6 @@
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
->>>>>>> 8dd3b06b48c2ccf63efa4a0815bf8c68f3f45ad0
 }
 
 .avatar-img {

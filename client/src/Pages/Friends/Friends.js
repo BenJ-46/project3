@@ -6,12 +6,9 @@ import { Grid, Cell } from 'react-mdl';
 import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
 import { GithubLoginButton } from 'react-social-login-buttons';
-<<<<<<< HEAD
-=======
 import logo from '../../components/Assets/Images/project_3_logo.png'
 
 
->>>>>>> 8dd3b06b48c2ccf63efa4a0815bf8c68f3f45ad0
 
 const Friends = () => {
   const [collabList, setCollabList] = useState([])
