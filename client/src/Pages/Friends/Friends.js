@@ -1,12 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './Friends.css'
-import { Card, FormGroup, Button, InputGroup, Input, InputGroupAddon, Form, CardSubtitle, Container, Row, Col } from "reactstrap";
+import { Card, FormGroup, Button, InputGroup, Input, InputGroupAddon, Form, CardSubtitle, Container, Row, Col, Toast, ToastBody, ToastHeader } from "reactstrap";
 import { Grid, Cell } from 'react-mdl';
 import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
 import { GithubLoginButton } from 'react-social-login-buttons';
-
+import logo from '../../components/Assets/Images/project_3_logo.png'
 
 
 
@@ -44,7 +44,7 @@ const Friends = () => {
     <>
       <h2 className="center"><span className="font-weight-bold">Friends List</span></h2>
       {/* // map through this is the jsx return */}
-      <h5 className="center">Your Chosen Collaborators</h5>
+      <h5 className="center">Your Chosen Collaborators:</h5>
 
       {collabList.map(friend => {
         console.log(collabList)
@@ -53,26 +53,45 @@ const Friends = () => {
           <>
 
 
-            <Container>
+            <Container className="center">
               <Row>
-
-                <Col sm="3">
-
-                  <Form className="friends">
+                <Col lg-3>
+                </Col>
+            <Col lg-3>
+                  <Form className="locate">
                     <FormGroup>
                       <div>
-                        <h1 key={friend}>{friend} <Button className="btn-lg btn-dark btn-block a text"><a className="text a" href="/Profile">Let's Chat</a></Button></h1>
+                        <h1 key={friend}>{friend} </h1>
                       </div>
                     </FormGroup>
-           
                   </Form>
-                </Col>
-                <h1>d</h1>
-                <Col sm="9">
+            </Col>
+            <Col lg-3>
+                  <Form>
+                    <div>
+                      <Toast>
+                        <ToastHeader >
+                          <div>
+                            <img className="logo" src={logo} alt="" />
+                        Chat with: <h1 className="font" key={friend}>{friend}</h1>
+                          </div>
+                        </ToastHeader>
+                        <ToastBody>
+                          Begin collaborating! Enter your message here...
+                      </ToastBody>
+                      </Toast>
+                    </div>
+                  </Form>
+              
 
                 
-                </Col>
+            </Col>
+            <Col lg-3>
+                 
+
+            </Col>
               </Row>
+              
             </Container>
 
 
