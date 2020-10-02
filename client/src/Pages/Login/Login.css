@@ -1,20 +1,28 @@
-.center{
+.center {
   text-align: center;
 }
 
-.login-form{
+.login-form {
   width: 100%;
   max-width: 330px;
   padding: 15px;
   margin: auto;
-  height: 100%
-  
-}
- .a:hover {
-   color: white
+  height: 100%;
 }
 
-.text{
-  color:  white;
+.b:hover {
+  color: black
+}
+
+.textb {
+  color: black;
   font-size: 5mm;
-  }
+}
+
+.layout {
+  background: rgb(237, 238, 188);
+}
+
+.content-wrap {
+  background: rgb(237, 238, 188);
+}

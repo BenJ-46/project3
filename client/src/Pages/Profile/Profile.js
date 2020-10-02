@@ -15,7 +15,7 @@ const Profile = () => {
   useEffect(() => {
     API.getUser(localStorage.getItem('user'))
       .then(({ data }) => {
-        setSavedState({ ...savedState, saved: data})
+        setSavedState({ ...savedState, saved: data })
       })
   })
 
@@ -27,7 +27,7 @@ const Profile = () => {
             <div style={{ width: '100%', margin: 'auto' }}>
               <Grid className='landing-grid'>
                 <Cell col={6}>
-                  <img style={{ width: "10cm", height: "10cm", borderRadius: "50%" }}
+                  <img style={{ width: "5cm", height: "5cm", borderRadius: "0%" }}
                     src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                     alt="avatar"
                     className="avatar-img" />
@@ -41,23 +41,21 @@ const Profile = () => {
 
                     <hr />
                     {/* This is where we would hard code in the landuages */}
-                    <h4>Username</h4>
+                    <h4> Username</h4>
                     <h3>{user.username}</h3>
+                    <h4>Email Address</h4>
                     <h4>{user.email}</h4>
 
-          <h2>{user.lang[0]}| {user.lang[0]} | {user.lang[0]}</h2>
-                    {/* <h2>{user.lang[1]}</h2>
-                    <h2>{user.lang[2]}</h2> */}
-
+                    <h2>{user.language} </h2> 
 
                     {/* <p>HTML/CSS | JavaScript | React | NodeJS | Jquery | C# | Express | MongoDB</p> */}
 
                     <div className="bio-text">
-                    <h2>{user.bio}</h2>
+                      <h2>{user.bio}</h2>
 
                       <hr />
 
-                    <p1>{user.devHist}</p1>
+                      <p1>{user.devHist}</p1>
 
                     </div>
                     <div className="social-links">

@@ -1,8 +1,16 @@
- .a:hover {
-   color: white
+.a:hover {
+  color: white
 }
 
-.text{
-  color:  white;
+.text {
+  color: white;
   font-size: 5mm;
-  }
+}
+
+.layout {
+  background: rgb(237, 238, 188);
+}
+
+.content-wrap {
+  background: rgb(237, 238, 188);
+}
