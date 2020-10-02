@@ -18,21 +18,21 @@ const Footer = () => {
             <ul className="list-unstyled">
                 <li> <AiOutlinePhone/> (619) 555-5555</li>
                 <li> <AiOutlineMail/> codeIn@customerservice.com</li>
-              <li>San Diego,CA</li>
               <li>905 California Street</li>
+              <li>San Diego, CA</li>
             </ul>
          </div>
           {/* Column2 */}
           <div className="col">
-            <h4>Resources</h4>
+            <h4>News/Info</h4>
             <ul className="list-unstyled">
-              <li>Test1</li>
-              <li>Test2</li>
+              <li>App Support</li>
+              <li>Product Manuels</li>
             </ul>
           </div>
           {/* Column3 */}
           <div className="col">
-            <h4>FAQ'S</h4>
+            <h4>FAQ's</h4>
             <ul className="list-unstyled">
                 <li>
                  Accessibility</li>
