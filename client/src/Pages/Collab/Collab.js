@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import API from '../../utils/API';
 import axios from 'axios';
-import logo from '../../components/Assets/Images/project_3_logo.png'
+import brand from '../../components/Assets/Images/project_3_logo.png'
 
 
 
@@ -78,7 +78,7 @@ const Collab = () => {
                     <Row>
                       <Col div lg="6">  
                         <img className="avatar-img img-fluid" 
-                    src={logo}
+                    src={brand}
                     alt="avatar" />
 
                   <h1 className="name"> {user.name}</h1>

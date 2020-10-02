@@ -28,7 +28,7 @@ const Profile = () => {
               <Grid className='landing-grid'>
                 <Cell col={6}>
                   <img style={{ width: "5cm", height: "5cm", borderRadius: "0%" }}
-                    src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    src="https://placeimg.com/640/480/people"
                     alt="avatar"
                     className="avatar-img" />
                   <Grid>
