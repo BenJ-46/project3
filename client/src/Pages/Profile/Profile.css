@@ -30,7 +30,7 @@
     margin-bottom: 10px;
 }
 
-.banner-text h1 h3 {
+.banner-text h1 h4 {
     font-size: 66px;
     font-weight: bold;
     color: white;
@@ -51,8 +51,8 @@
 
 .bio-text h2 {
     font-size: 20px;
-    font-weight: bold;
-    color: white;
+    
+    color: black;
 }
 
 .bio-text p1 {
