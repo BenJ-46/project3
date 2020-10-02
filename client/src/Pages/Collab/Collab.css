@@ -34,12 +34,23 @@
 
 .userName {
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: teal;
+    border: teal;
 }
 
 .bio {
-    text-align: center;
+    /* text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: .02; */
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.dev {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
 
@@ -80,6 +91,11 @@
 
 .content-wrap {
     background: rgb(237, 238, 188);
+}
+
+.card {
+    float: center;
+    padding-top: 0%;
 }
 
 /* .search-box {
