@@ -24,17 +24,15 @@ const User = new Schema({
         type: String,
         required: true
     },
-    lang: {
+    language: {
         // type Array on mongoDB
-        type: Array,
+        type: String,
         required: true,
         // message: 'Please list languages'
     },
+    collabList: { type: Array, "default": [] }
 
 }, { timestamps: true })
 
 
 module.exports = model('User', User)
-
-
-    
