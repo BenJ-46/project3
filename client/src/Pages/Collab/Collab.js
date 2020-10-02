@@ -85,17 +85,20 @@ const handleCollabAdd = (e) => {
                   
                 
                       </Col>
-                      <Col div lg="6" style= {{position: "relative"}}>
-                        <h3 style={{ position: "absolute", bottom: "7rem" }} className="userName">{user.username}</h3>
+                      <Col div lg="6">
+                        <Card className="card">
+                        <h3  className="userName">@{user.username}</h3>
                         <h2 className="lang">I specialize in {user.language}</h2>
                        
 
-                        <h3 style={{ position: "absolute", bottom: "7rem"}}className="bio">{user.bio}</h3>
-
+                        <h3 className="bio">{user.bio}</h3>
+                        <h3 className="dev">{user.devHist}</h3>
+                        </Card>
                         
 
                         <Button style={{ position: "absolute", bottom: "4rem", left: "0", marginRight: "0" }} color="warning" size="lg" block data-user={user.name} onClick={handleCollabAdd}>Let's Collab</Button>
                         <Button style={{ position: "absolute",bottom: ".5rem", left:"0", marginRight:"0"}}color="warning" size="lg" block>Maybe Next time!</Button>
+                      
                       </Col>
 
                     </Row>
