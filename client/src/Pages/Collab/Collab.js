@@ -78,7 +78,7 @@ const Collab = () => {
                     <Row>
                       <Col div lg="6">  
                         <img className="avatar-img img-fluid" 
-                    src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    src="https://placeimg.com/640/480/people"
                     alt="avatar" />
 
                   <h1 className="name"> {user.name}</h1>
