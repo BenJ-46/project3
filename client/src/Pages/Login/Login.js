@@ -9,11 +9,30 @@ import { GithubLoginButton } from 'react-social-login-buttons';
 import './Login.css'
 import { Router } from 'react-router-dom';
 import Footer from '../../components/Footer'
+import API from '../../utils/API';
 
 const Login = (props) => {
 
+  // const [loginState, setLoginState] = useState({
+  //   email: [],
+  //   password: [],
+  //   user: []
+  // })
 
+  // loginState.handleInputChange = event => {
+  //   setLoginState({ ...loginState, [event.target.name]: event.target.value })
+  // }
 
+  // loginState.handleUserLogin = userID => {
+  //   const user = loginState.user.filter(x => x.userID === userID)
+  //   API.getLoginInfo(user)
+  //   .then( data => {
+  //     // const localStorage = loginState.user.filter(x => x.userID === userID)
+  //     localStorage.getItem('email')
+  //     localStorage.getItem('password')
+  //     window.location = '/Profile'
+  //   })
+  // }
 
   return (
 
@@ -54,5 +73,3 @@ const Login = (props) => {
 
 
 export default Login
-
-

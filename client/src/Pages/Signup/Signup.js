@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Switch, Route, Link } from 'react-router-dom'
-// import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Button, Form, FormText, Container, Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
 import { Grid, Cell } from 'react-mdl'
 import { FacebookLoginButton } from 'react-social-login-buttons';
@@ -24,8 +22,7 @@ const Signup = () => {
     devHistory:'',
     user: []
   })
-  
-  
+    
   userState.handleInputChange = event => {
     setUserState({ ...userState, [event.target.name]: event.target.value })
   }
@@ -41,7 +38,7 @@ const Signup = () => {
 
   userState.handleRegisterChange = event => {
     event.preventDefault()
-    axios.post('/api/users', {
+    axios.post('/api/users/register', {
       name: userState.name,
       username: userState.username,
       email: userState.email,
@@ -114,16 +111,6 @@ const Signup = () => {
           name="language"
           onChange={userState.handleInputChange}
           placeholder="Enter known Languages" />
-          {/* <Input 
-          type="text" 
-          name="language"
-          onChange={userState.handleInputChange}
-          placeholder="Enter known Languages" />
-          <Input 
-          type="text" 
-          name="language"
-          onChange={userState.handleInputChange}
-          placeholder="Enter known Languages" /> */}
         </FormGroup>
         <FormGroup className="center">
           <label >Dev History</label>
@@ -142,8 +129,6 @@ const Signup = () => {
           </Container>
         </Cell>
       </Grid>
-
-
     </>
   )
 }

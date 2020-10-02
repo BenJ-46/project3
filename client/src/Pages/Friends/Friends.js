@@ -7,9 +7,6 @@ import { FacebookLoginButton } from 'react-social-login-buttons';
 import { InstagramLoginButton } from 'react-social-login-buttons';
 import { GithubLoginButton } from 'react-social-login-buttons';
 
-
-
-
 const Friends = () => {
   const [collabList, setCollabList] = useState([])
   // Pull from local storage the current user
