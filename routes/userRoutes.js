@@ -1,31 +1,31 @@
 const router = require('express').Router()
 const { User } = require('../models')
-const passport = require('passport')
-const jwt = require('jsonwebtoken')
+// const passport = require('passport')
+// const jwt = require('jsonwebtoken')
  
 // Create One user to Register
-router.post('/users/register', (req, res) => {
-  const { name, username, email, bio, devHist, language, password } = req.body
-  User.register(new User({ name, username, email, bio, devHist, language }), password, err => {
-    if (err) { console.log(err) }
-    res.sendStatus(200)
-  })
-})
+// router.post('/users/register', (req, res) => {
+//   const { name, username, email, bio, devHist, language, password } = req.body
+//   User.register(new User({ name, username, email, bio, devHist, language }), password, err => {
+//     if (err) { console.log(err) }
+//     res.sendStatus(200)
+//   })
+// })
 
 // User Login Route w/ Authorization
-router.post('/users/login', (req, res) => {
-  const { email, password } = req.body
-  User.authenticate()(email, password, (err, user) => {
-    if (err) { console.log(err) }
-    res.json(user ? jwt.sign({ id: user._id }, process.env.SECRET) : null)
-  })
-})
+// router.post('/users/login', (req, res) => {
+//   const { email, password } = req.body
+//   User.authenticate()(email, password, (err, user) => {
+//     if (err) { console.log(err) }
+//     res.json(user ? jwt.sign({ id: user._id }, process.env.SECRET) : null)
+//   })
+// })
 
 // this gives the jsonWebToken
-router.get('/users', passport.authenticate('jwt'), (req, res) => {
-  res.sendStatus(200)
-  res.json(req.user)
-})
+// router.get('/users', passport.authenticate('jwt'), (req, res) => {
+//   res.sendStatus(200)
+//   res.json(req.user)
+// })
 
 
 // CodeIn ROUTES //
@@ -42,6 +42,11 @@ router.get('/users/:name', (req, res) => {
     .catch(err => console.error(err))
 })
 
+router.post('/users', (req, res) => {
+  User.create(req.body)
+    .then(user => res.json(user))
+    .catch(err => console.error(err))
+})
 
 // POST one User/:name & relation it w/ collabList
 router.post('/users/:name', (req, res) => {
@@ -61,6 +66,4 @@ router.post('/users/:name', (req, res) => {
     });
 })
 
-
 module.exports = router
-
