@@ -2,6 +2,16 @@
     background: rgb(237, 238, 188);
     padding-left: 0mm;
 }
-/* .friends{
-  margin: 
-} */
+.font{
+  font-size: small;
+}
+.logo{
+  height:20px;
+  width: 20px;
+  
+}
+
+.locate{
+ text-align: center;
+}
+
