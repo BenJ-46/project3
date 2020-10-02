@@ -41,12 +41,12 @@ const Profile = () => {
 
                     <hr />
                     {/* This is where we would hard code in the landuages */}
-                    <h4> Username</h4>
-                    <h3>{user.username}</h3>
-                    <h4>Email Address</h4>
+                    
+                    <h3>@{user.username}</h3>
+                    
                     <h4>{user.email}</h4>
 
-                    <h2>{user.language} </h2> 
+                    <h2>I specialize in: {user.language} </h2> 
 
                     {/* <p>HTML/CSS | JavaScript | React | NodeJS | Jquery | C# | Express | MongoDB</p> */}
 
@@ -54,8 +54,8 @@ const Profile = () => {
                       <h2>{user.bio}</h2>
 
                       <hr />
-
-                      <p1>{user.devHist}</p1>
+{/* 
+                      <p1>{user.devHist}</p1> */}
 
                     </div>
                     <div className="social-links">

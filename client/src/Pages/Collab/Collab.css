@@ -33,6 +33,7 @@
 }
 
 .userName {
+<<<<<<< HEAD
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -41,6 +42,27 @@
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   
+=======
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: teal;
+    border: teal;
+}
+
+.bio {
+    /* text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: .02; */
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.dev {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+>>>>>>> 8dd3b06b48c2ccf63efa4a0815bf8c68f3f45ad0
 }
 
 .avatar-img {
@@ -80,6 +102,11 @@
 
 .content-wrap {
   background: rgb(237, 238, 188);
+}
+
+.card {
+    float: center;
+    padding-top: 0%;
 }
 
 /* .search-box {
