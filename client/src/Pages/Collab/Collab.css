@@ -54,14 +54,14 @@
     
 }
 
-.avatar-img {
+/* .avatar-img {
   height: 100px;
   padding-top: 1em;
   padding-bottom: 1em;
   border-radius: 0%;
   margin: "auto";
-  /* padding: 1em; */
-}
+  padding: 1em;
+} */
 
 /* style= {
       {
@@ -145,5 +145,9 @@ width: 0px;
 .logo-size {
   height: 75% ;
   width: 55% ;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 0%;
   align-content: right !important;
+  margin: "auto";
 }
