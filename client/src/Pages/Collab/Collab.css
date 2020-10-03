@@ -145,5 +145,5 @@ width: 0px;
 .logo-size {
   height: 75% ;
   width: 55% ;
-  float: center;
+  align-items: center;
 }
