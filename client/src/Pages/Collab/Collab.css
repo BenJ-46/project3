@@ -143,6 +143,7 @@ width: 0px;
 
 } 
 .logo-size {
-  height: 70% ;
+  height: 75% ;
   width: 55% ;
+  float: center;
 }
