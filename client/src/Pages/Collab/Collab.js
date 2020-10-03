@@ -77,7 +77,7 @@ const Collab = () => {
                   <Container>
                     <Row>
                       <Col div lg="6">  
-                        <img className="avatar-img img-fluid logo-size" 
+                        <img className="avatar-img logo-size"
                     src={brand}
                     alt="avatar" />
 
