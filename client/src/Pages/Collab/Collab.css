@@ -143,11 +143,11 @@ width: 0px;
 
 } 
 .logo-size {
-  /* height: 75% ; */
+  height: auto ;
   width: 55% ;
   padding-top: 1em;
   padding-bottom: 1em;
-  padding-left: 5 em;
+  padding-left: 5em;
   border-radius: 0%;
   align-content: right !important;
   margin: "auto";
