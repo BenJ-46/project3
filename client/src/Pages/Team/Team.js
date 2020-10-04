@@ -23,7 +23,7 @@ const Team = () => {
                     <CardImg top width="100%" src={Kalyn} alt="Card image cap"
                     />
                     <CardTitle className="center ourName">Kalyn Simms</CardTitle>
-                    <CardText className="center">Stuff about Kalyn</CardText>
+                    <CardText className="center">Kalyn Simms recently graduated from the University of California, Irvine Coding Bootcamp as a Full-Stack Web Developer. She enjoys developing functional apps, while dabbling in Event Planning on the side</CardText>
 
                     <div className="social-link landing-grids">
                       <a href="https://github.com/Kalynbsimms" rel="noopener noreferrer" target="_blank">
@@ -40,7 +40,7 @@ const Team = () => {
                   <Card body>
                     <CardImg top width="100%" src={Nic} alt="Card image cap" />
                     <CardTitle className="center ourName">Nicholas Dallas</CardTitle>
-                    <CardText className="center">Stuff about Nicholas</CardText>
+                    <CardText className="center">Nicholas Dallas recently graduated from the UCI, Continuing Education Program as a Full-Stack Web Developer. Nicholas is a business owner of Wicked Wolf Den llc and Huntington Beach Youth Lacrosse Organization a registered nonprofit 501(c)3.</CardText>
                     <div className="social-link landing-grids">
                       <a href="https://github.com/nicholasd-uci" rel="noopener noreferrer" target="_blank">
                         <i className=" fa fa-github-square" aria-hidden="true" />
@@ -57,7 +57,7 @@ const Team = () => {
                   <Card body>
                     <CardImg top width="100%" src={Dave} alt="Card image cap" />
                     <CardTitle className="center ourName">Dave Trimboli</CardTitle>
-                    <CardText className="center">Stuff about Dave</CardText>
+                    <CardText className="center">Dave studied live show production at Full Sail University in Orlando, FL.  He then toured for years as an Audio Visual Manager with a show called Monster Jam, a property of the Feld Entertainment conglomerate.</CardText>
                     <div className="social-link landing-grids">
                       <a href="https://github.com/datrimboli" rel="noopener noreferrer" target="_blank">
                         <i className=" fa fa-github-square" aria-hidden="true" />
@@ -74,7 +74,7 @@ const Team = () => {
                   <Card body>
                     <CardImg top width="100%" src={Ben} alt="Card image cap" />
                     <CardTitle className="center ourName">Benjamin Jimenez</CardTitle>
-                    <CardText className="center">Stuff about Benjamin</CardText>
+                    <CardText className="center">Benjamin Jimenez recently graduated from the UCI, Continuing Education Program as a Full-Stack Web Developer. Ben comes from a diverse background with experience as a Barista and Construction Lab Technician. </CardText>
                     <div className="social-link landing-grids">
                       <a href="https://github.com/BenJ-46" rel="noopener noreferrer" target="_blank">
                         <i className=" fa fa-github-square" aria-hidden="true" />
